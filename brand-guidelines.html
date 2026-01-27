@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viewstate Consulting - Brand Guidelines</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #0a0a0a;
+      background: #fafafa;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+
+    .page-break {
+      page-break-after: always;
+      margin: 64px 0;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid #0a0a0a;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      margin-top: 32px;
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: #2a2a2a;
+    }
+
+    .header {
+      margin-bottom: 64px;
+    }
+
+    .version {
+      font-size: 14px;
+      color: #6a6a6a;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #6a6a6a;
+    }
+
+    /* Logo Section */
+    .logo-display {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      margin: 32px 0;
+    }
+
+    .logo-item {
+      flex: 1 1 300px;
+      padding: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #e5e5e5;
+    }
+
+    .logo-item.dark {
+      background: #0a0a0a;
+    }
+
+    .logo-item.light {
+      background: #fafafa;
+    }
+
+    .logo-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #6a6a6a;
+      margin-top: 16px;
+    }
+
+    /* Striped logo CSS implementation */
+    .logo-striped {
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      background: repeating-linear-gradient(
+        to bottom,
+        currentColor 0px,
+        currentColor 8px,
+        transparent 8px,
+        transparent 12px
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .logo-striped.black {
+      background: repeating-linear-gradient(
+        to bottom,
+        #0a0a0a 0px,
+        #0a0a0a 8px,
+        transparent 8px,
+        transparent 12px
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .logo-striped.white {
+      background: repeating-linear-gradient(
+        to bottom,
+        #fafafa 0px,
+        #fafafa 8px,
+        transparent 8px,
+        transparent 12px
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .logo-stacked {
+      font-size: 36px;
+      line-height: 1.1;
+      text-align: center;
+    }
+
+    .logo-mono {
+      font-size: 56px;
+    }
+
+    /* Color Palette */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 24px;
+      margin: 32px 0;
+    }
+
+    .color-swatch {
+      aspect-ratio: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 16px;
+      border: 1px solid #e5e5e5;
+    }
+
+    .color-name {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .color-hex {
+      font-size: 12px;
+      font-family: monospace;
+      color: inherit;
+      opacity: 0.8;
+    }
+
+    .color-swatch.primary-black {
+      background: #0a0a0a;
+      color: #fafafa;
+    }
+
+    .color-swatch.dark-grey {
+      background: #2a2a2a;
+      color: #fafafa;
+    }
+
+    .color-swatch.mid-grey {
+      background: #6a6a6a;
+      color: #fafafa;
+    }
+
+    .color-swatch.light-grey {
+      background: #e5e5e5;
+      color: #0a0a0a;
+    }
+
+    .color-swatch.off-white {
+      background: #fafafa;
+      color: #0a0a0a;
+    }
+
+    /* Typography */
+    .type-specimen {
+      margin: 32px 0;
+      padding: 32px;
+      background: #fff;
+      border: 1px solid #e5e5e5;
+    }
+
+    .type-sample {
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .type-sample:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .type-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #6a6a6a;
+      margin-bottom: 8px;
+    }
+
+    .type-hero {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .type-section {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .type-card {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .type-body {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .type-small {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .type-tiny {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+
+    /* Spacing */
+    .spacing-visual {
+      display: flex;
+      align-items: flex-end;
+      gap: 16px;
+      margin: 32px 0;
+    }
+
+    .spacing-unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .spacing-box {
+      background: #0a0a0a;
+      margin-bottom: 8px;
+    }
+
+    .spacing-label {
+      font-size: 12px;
+      color: #6a6a6a;
+    }
+
+    /* Rules */
+    .rule-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin: 32px 0;
+    }
+
+    .rule-item {
+      padding: 24px;
+      border: 1px solid #e5e5e5;
+    }
+
+    .rule-item.do {
+      border-color: #0a0a0a;
+    }
+
+    .rule-item.dont {
+      border-color: #ccc;
+      background: #f5f5f5;
+    }
+
+    .rule-badge {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 12px;
+    }
+
+    .rule-item.do .rule-badge {
+      color: #0a0a0a;
+    }
+
+    .rule-item.dont .rule-badge {
+      color: #6a6a6a;
+    }
+
+    ul {
+      margin-left: 24px;
+      margin-bottom: 16px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      color: #2a2a2a;
+    }
+
+    code {
+      background: #e5e5e5;
+      padding: 2px 6px;
+      font-family: monospace;
+      font-size: 14px;
+    }
+
+    @media print {
+      .container {
+        padding: 0;
+      }
+
+      .page-break {
+        page-break-after: always;
+        border: none;
+        margin: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      .logo-display {
+        flex-direction: column;
+      }
+
+      .rule-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <p class="version">Brand Guidelines v1.0 | January 2025</p>
+      <h1>Viewstate Consulting</h1>
+      <p class="subtitle">Brand Identity Guidelines</p>
+    </header>
+
+    <!-- Introduction -->
+    <section>
+      <h2>Introduction</h2>
+      <p>Viewstate Consulting is a Dubai-based IT infrastructure consulting and fractional technology leadership firm. Our brand identity reflects our core values: precision, clarity, expertise, and modern thinking.</p>
+      <p>These guidelines ensure consistent application of our brand across all touchpoints. Every element has been carefully considered to communicate professionalism, technical expertise, and timeless sophistication.</p>
+
+      <h3>Design Philosophy</h3>
+      <p>Our visual identity draws inspiration from three key sources:</p>
+      <ul>
+        <li><strong>Nordic Minimalism</strong> — Function over decoration, clarity over complexity</li>
+        <li><strong>Dieter Rams' Principles</strong> — Good design is as little design as possible</li>
+        <li><strong>IBM 1970s Aesthetic</strong> — Paul Rand's iconic striped logo approach</li>
+      </ul>
+    </section>
+
+    <div class="page-break"></div>
+
+    <!-- Logo -->
+    <section>
+      <h2>Logo</h2>
+      <p>The Viewstate logo features horizontal stripes running through bold, geometric letterforms. This design pays homage to Paul Rand's iconic IBM logo while creating a distinctive identity that represents our analytical, methodical approach to consulting.</p>
+
+      <h3>Primary Logo (Horizontal)</h3>
+      <div class="logo-display">
+        <div class="logo-item light">
+          <div>
+            <div class="logo-striped black">VIEWSTATE</div>
+            <p class="logo-label">On light backgrounds</p>
+          </div>
+        </div>
+        <div class="logo-item dark">
+          <div>
+            <div class="logo-striped white">VIEWSTATE</div>
+            <p class="logo-label" style="color: #6a6a6a;">On dark backgrounds</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>Stacked Logo</h3>
+      <p>Use the stacked version for square formats and social media applications.</p>
+      <div class="logo-display">
+        <div class="logo-item light">
+          <div>
+            <div class="logo-striped logo-stacked black">VIEW<br>STATE</div>
+            <p class="logo-label">On light backgrounds</p>
+          </div>
+        </div>
+        <div class="logo-item dark">
+          <div>
+            <div class="logo-striped logo-stacked white">VIEW<br>STATE</div>
+            <p class="logo-label" style="color: #6a6a6a;">On dark backgrounds</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>Monogram</h3>
+      <p>Use the VS monogram for favicons, app icons, and small-scale applications.</p>
+      <div class="logo-display">
+        <div class="logo-item light">
+          <div>
+            <div class="logo-striped logo-mono black">VS</div>
+            <p class="logo-label">On light backgrounds</p>
+          </div>
+        </div>
+        <div class="logo-item dark">
+          <div>
+            <div class="logo-striped logo-mono white">VS</div>
+            <p class="logo-label" style="color: #6a6a6a;">On dark backgrounds</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="page-break"></div>
+
+    <!-- Logo Usage Rules -->
+    <section>
+      <h2>Logo Usage</h2>
+
+      <h3>Clear Space</h3>
+      <p>Maintain minimum clear space around the logo equal to the height of the letter "V" in the logo. This ensures the logo remains legible and impactful.</p>
+
+      <h3>Minimum Size</h3>
+      <p>To maintain legibility of the striped effect:</p>
+      <ul>
+        <li>Horizontal logo: minimum width of 120px</li>
+        <li>Stacked logo: minimum width of 80px</li>
+        <li>Monogram: minimum width of 24px</li>
+      </ul>
+
+      <h3>Usage Rules</h3>
+      <div class="rule-grid">
+        <div class="rule-item do">
+          <p class="rule-badge">Do</p>
+          <ul style="margin-left: 16px;">
+            <li>Use provided logo files only</li>
+            <li>Maintain aspect ratio</li>
+            <li>Use black on light backgrounds</li>
+            <li>Use white on dark backgrounds</li>
+            <li>Ensure sufficient contrast</li>
+          </ul>
+        </div>
+        <div class="rule-item dont">
+          <p class="rule-badge">Don't</p>
+          <ul style="margin-left: 16px;">
+            <li>Distort or stretch the logo</li>
+            <li>Change the stripe pattern</li>
+            <li>Add shadows or effects</li>
+            <li>Place on busy backgrounds</li>
+            <li>Use colors other than black/white</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="page-break"></div>
+
+    <!-- Color Palette -->
+    <section>
+      <h2>Color Palette</h2>
+      <p>Our color palette is intentionally restrained. Black, white, and grey communicate professionalism, timelessness, and focus. This monochromatic approach ensures our brand never feels dated or trendy.</p>
+
+      <div class="color-grid">
+        <div class="color-swatch primary-black">
+          <span class="color-name">Primary Black</span>
+          <span class="color-hex">#0a0a0a</span>
+        </div>
+        <div class="color-swatch dark-grey">
+          <span class="color-name">Dark Grey</span>
+          <span class="color-hex">#2a2a2a</span>
+        </div>
+        <div class="color-swatch mid-grey">
+          <span class="color-name">Mid Grey</span>
+          <span class="color-hex">#6a6a6a</span>
+        </div>
+        <div class="color-swatch light-grey">
+          <span class="color-name">Light Grey</span>
+          <span class="color-hex">#e5e5e5</span>
+        </div>
+        <div class="color-swatch off-white">
+          <span class="color-name">Off-White</span>
+          <span class="color-hex">#fafafa</span>
+        </div>
+      </div>
+
+      <h3>Color Usage</h3>
+      <ul>
+        <li><strong>Primary Black (#0a0a0a)</strong> — Headlines, body text, dark backgrounds</li>
+        <li><strong>Dark Grey (#2a2a2a)</strong> — Secondary text, subtle emphasis</li>
+        <li><strong>Mid Grey (#6a6a6a)</strong> — Captions, labels, metadata</li>
+        <li><strong>Light Grey (#e5e5e5)</strong> — Borders, dividers, subtle backgrounds</li>
+        <li><strong>Off-White (#fafafa)</strong> — Page backgrounds, light sections</li>
+      </ul>
+    </section>
+
+    <div class="page-break"></div>
+
+    <!-- Typography -->
+    <section>
+      <h2>Typography</h2>
+      <p>DM Sans is our primary typeface. It's a geometric sans-serif with clean lines and excellent legibility at all sizes. The font is available via Google Fonts.</p>
+
+      <h3>Typeface</h3>
+      <div class="type-specimen">
+        <p style="font-size: 32px; font-weight: 700; margin-bottom: 8px;">DM Sans</p>
+        <p style="font-size: 18px; color: #6a6a6a; margin-bottom: 24px;">Available weights: 300, 400, 500, 600, 700</p>
+        <p style="font-size: 24px; margin-bottom: 8px; font-weight: 300;">Light (300) — Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm</p>
+        <p style="font-size: 24px; margin-bottom: 8px; font-weight: 400;">Regular (400) — Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm</p>
+        <p style="font-size: 24px; margin-bottom: 8px; font-weight: 500;">Medium (500) — Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm</p>
+        <p style="font-size: 24px; margin-bottom: 8px; font-weight: 600;">SemiBold (600) — Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm</p>
+        <p style="font-size: 24px; font-weight: 700;">Bold (700) — Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm</p>
+      </div>
+
+      <h3>Type Scale</h3>
+      <div class="type-specimen">
+        <div class="type-sample">
+          <p class="type-label">Hero Title — 72px / 700 / 1.1</p>
+          <p class="type-hero">Expert IT Infrastructure</p>
+        </div>
+        <div class="type-sample">
+          <p class="type-label">Section Title — 48px / 700 / 1.2</p>
+          <p class="type-section">Comprehensive IT Solutions</p>
+        </div>
+        <div class="type-sample">
+          <p class="type-label">Card Title — 24px / 700</p>
+          <p class="type-card">Fractional IT Leadership</p>
+        </div>
+        <div class="type-sample">
+          <p class="type-label">Body Text — 16px / 400 / 1.6</p>
+          <p class="type-body">Strategic technology guidance without the full-time commitment. Expert leadership for companies needing senior IT direction.</p>
+        </div>
+        <div class="type-sample">
+          <p class="type-label">Small Text — 14px / 400 / 1.6</p>
+          <p class="type-small">Available for project-based engagements and retainer consulting.</p>
+        </div>
+        <div class="type-sample">
+          <p class="type-label">Tiny Text (Labels) — 11px / 600 / Uppercase / 0.15em</p>
+          <p class="type-tiny">Our Services</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="page-break"></div>
+
+    <!-- Spacing -->
+    <section>
+      <h2>Spacing System</h2>
+      <p>Our spacing system is based on an 8px unit. This creates consistent, harmonious layouts across all applications.</p>
+
+      <div class="spacing-visual">
+        <div class="spacing-unit">
+          <div class="spacing-box" style="width: 8px; height: 8px;"></div>
+          <span class="spacing-label">8px</span>
+        </div>
+        <div class="spacing-unit">
+          <div class="spacing-box" style="width: 16px; height: 16px;"></div>
+          <span class="spacing-label">16px</span>
+        </div>
+        <div class="spacing-unit">
+          <div class="spacing-box" style="width: 24px; height: 24px;"></div>
+          <span class="spacing-label">24px</span>
+        </div>
+        <div class="spacing-unit">
+          <div class="spacing-box" style="width: 32px; height: 32px;"></div>
+          <span class="spacing-label">32px</span>
+        </div>
+        <div class="spacing-unit">
+          <div class="spacing-box" style="width: 48px; height: 48px;"></div>
+          <span class="spacing-label">48px</span>
+        </div>
+        <div class="spacing-unit">
+          <div class="spacing-box" style="width: 64px; height: 64px;"></div>
+          <span class="spacing-label">64px</span>
+        </div>
+        <div class="spacing-unit">
+          <div class="spacing-box" style="width: 96px; height: 96px;"></div>
+          <span class="spacing-label">96px</span>
+        </div>
+      </div>
+
+      <h3>Layout Specifications</h3>
+      <ul>
+        <li><strong>Max content width:</strong> 1200px</li>
+        <li><strong>Section padding:</strong> 96px vertical, 24px horizontal</li>
+        <li><strong>Grid gaps:</strong> 48px between cards/columns</li>
+        <li><strong>Component padding:</strong> 24px or 32px</li>
+      </ul>
+    </section>
+
+    <div class="page-break"></div>
+
+    <!-- Design Principles -->
+    <section>
+      <h2>Design Principles</h2>
+      <p>Every design decision should align with these principles, inspired by Dieter Rams:</p>
+
+      <h3>1. Good design is innovative</h3>
+      <p>We use modern techniques and technologies while respecting timeless principles.</p>
+
+      <h3>2. Good design makes a product useful</h3>
+      <p>Every element serves a purpose. If it doesn't communicate or function, remove it.</p>
+
+      <h3>3. Good design is aesthetic</h3>
+      <p>Beauty through simplicity and proportion, not decoration.</p>
+
+      <h3>4. Good design makes a product understandable</h3>
+      <p>Clear hierarchy, obvious navigation, intuitive interactions.</p>
+
+      <h3>5. Good design is unobtrusive</h3>
+      <p>The design should support content, not compete with it.</p>
+
+      <h3>6. Good design is honest</h3>
+      <p>No visual gimmicks or misleading effects. Authentic representation.</p>
+
+      <h3>7. Good design is long-lasting</h3>
+      <p>Avoid trends. Create designs that will look appropriate in 10 years.</p>
+
+      <h3>8. Good design is thorough down to the last detail</h3>
+      <p>Nothing is arbitrary. Every pixel is considered.</p>
+
+      <h3>9. Good design is environmentally friendly</h3>
+      <p>Optimized code, fast loading, minimal resources.</p>
+
+      <h3>10. Good design is as little design as possible</h3>
+      <p>Less, but better. Concentrate on the essential aspects.</p>
+    </section>
+
+    <div class="page-break"></div>
+
+    <!-- Voice & Tone -->
+    <section>
+      <h2>Voice & Tone</h2>
+
+      <h3>Brand Voice</h3>
+      <ul>
+        <li><strong>Clear and direct</strong> — No fluff or marketing speak</li>
+        <li><strong>Confident without arrogance</strong> — We know our stuff, but we're approachable</li>
+        <li><strong>Technical but accessible</strong> — Explain complex topics simply</li>
+        <li><strong>Results-focused</strong> — Emphasize outcomes over process</li>
+        <li><strong>Professional but human</strong> — Avoid corporate jargon</li>
+      </ul>
+
+      <h3>Writing Examples</h3>
+      <div class="rule-grid">
+        <div class="rule-item do">
+          <p class="rule-badge">Do Write</p>
+          <ul style="margin-left: 16px;">
+            <li>"We solve complex IT problems faster using AI-assisted workflows"</li>
+            <li>"15 years managing IT operations across 10+ countries"</li>
+            <li>"We embed with your team and deliver practical solutions"</li>
+          </ul>
+        </div>
+        <div class="rule-item dont">
+          <p class="rule-badge">Don't Write</p>
+          <ul style="margin-left: 16px;">
+            <li>"We leverage cutting-edge synergistic solutions to optimize your digital transformation journey"</li>
+            <li>"Extensive experience in multinational IT leadership"</li>
+            <li>"We partner with stakeholders to ideate innovative strategies"</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="margin-top: 64px; padding-top: 32px; border-top: 1px solid #e5e5e5;">
+      <p style="color: #6a6a6a; font-size: 14px;">© 2025 Viewstate Consulting. Dubai, UAE.</p>
+      <p style="color: #6a6a6a; font-size: 14px;">These guidelines are a living document and may be updated as the brand evolves.</p>
+    </footer>
+  </div>
+</body>
+</html>

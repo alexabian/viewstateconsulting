@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <pattern id="stripes-favicon" patternUnits="userSpaceOnUse" width="32" height="6">
+      <rect width="32" height="4" fill="#0a0a0a"/>
+      <rect y="4" width="32" height="2" fill="transparent"/>
+    </pattern>
+    <clipPath id="vs-clip">
+      <text x="2" y="26" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="-0.05em">VS</text>
+    </clipPath>
+  </defs>
+  <rect width="32" height="32" fill="#fafafa"/>
+  <g clip-path="url(#vs-clip)">
+    <rect x="0" y="0" width="32" height="32" fill="url(#stripes-favicon)"/>
+  </g>
+</svg>
