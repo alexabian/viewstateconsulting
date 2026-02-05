@@ -1,1026 +1,1292 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Expert IT infrastructure consulting and fractional technology leadership for growing companies in Dubai and internationally. VIP IT advisory services.">
-  <meta name="keywords" content="IT consulting, fractional CTO, IT infrastructure, Dubai, technology leadership, IT management">
-  <meta name="author" content="Viewstate Consulting">
-
-  <!-- Open Graph / Social Media -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://viewstate.ae/">
-  <meta property="og:title" content="Viewstate Consulting | IT Infrastructure & Technology Leadership | Dubai">
-  <meta property="og:description" content="Expert IT infrastructure consulting and fractional technology leadership for growing companies in Dubai and internationally.">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Viewstate Consulting | IT Infrastructure & Technology Leadership">
-  <meta name="twitter:description" content="Expert IT infrastructure consulting and fractional technology leadership for growing companies.">
-
-  <title>Viewstate Consulting | IT Infrastructure & Technology Leadership | Dubai</title>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    /* ==========================================================================
-       CSS Custom Properties (Design Tokens)
-       ========================================================================== */
-    :root {
-      /* Colors */
-      --color-black: #0a0a0a;
-      --color-dark-grey: #2a2a2a;
-      --color-mid-grey: #6a6a6a;
-      --color-light-grey: #e5e5e5;
-      --color-off-white: #fafafa;
-      --color-white: #ffffff;
-
-      /* Typography */
-      --font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-
-      /* Spacing */
-      --space-unit: 8px;
-      --space-xs: 8px;
-      --space-sm: 16px;
-      --space-md: 24px;
-      --space-lg: 32px;
-      --space-xl: 48px;
-      --space-2xl: 64px;
-      --space-3xl: 96px;
-
-      /* Layout */
-      --max-width: 1200px;
-      --section-padding: 96px;
-      --grid-gap: 48px;
-
-      /* Transitions */
-      --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    /* ==========================================================================
-       Reset & Base Styles
-       ========================================================================== */
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    body {
-      font-family: var(--font-family);
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 1.6;
-      color: var(--color-black);
-      background-color: var(--color-off-white);
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    ul, ol {
-      list-style: none;
-    }
-
-    /* ==========================================================================
-       Typography
-       ========================================================================== */
-    h1, h2, h3, h4, h5, h6 {
-      font-weight: 700;
-      line-height: 1.2;
-    }
-
-    .hero-title {
-      font-size: clamp(42px, 8vw, 72px);
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-    }
-
-    .section-title {
-      font-size: clamp(24px, 3vw, 36px);
-      line-height: 1.2;
-      margin-bottom: var(--space-xl);
-    }
-
-    .card-title {
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: var(--space-sm);
-    }
-
-    .label {
-      font-size: 11px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--color-mid-grey);
-    }
-
-    .label-light {
-      color: rgba(255, 255, 255, 0.6);
-    }
-
-    /* ==========================================================================
-       Layout Components
-       ========================================================================== */
-    .container {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 var(--space-md);
-    }
-
-    .section {
-      padding: var(--space-3xl) 0;
-    }
-
-    .section-dark {
-      background-color: var(--color-black);
-      color: var(--color-off-white);
-    }
-
-    .section-grey {
-      background-color: var(--color-light-grey);
-    }
-
-    .section-white {
-      background-color: var(--color-white);
-    }
-
-    /* ==========================================================================
-       Logo
-       ========================================================================== */
-    .logo {
-      font-size: 24px;
-      font-weight: 700;
-      color: var(--color-black);
-    }
-
-    /* ==========================================================================
-       Header & Navigation
-       ========================================================================== */
-    .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      background-color: var(--color-off-white);
-      border-bottom: 1px solid var(--color-light-grey);
-      transition: background-color var(--transition-base), box-shadow var(--transition-base);
-    }
-
-    .header.scrolled {
-      background-color: rgba(250, 250, 250, 0.95);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-    }
-
-    .header-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 72px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px 24px;
-      font-family: var(--font-family);
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      border: 2px solid var(--color-black);
-      background-color: transparent;
-      color: var(--color-black);
-      cursor: pointer;
-      transition: all var(--transition-base);
-    }
-
-    .btn:hover {
-      background-color: var(--color-black);
-      color: var(--color-off-white);
-    }
-
-    .btn-light {
-      border-color: var(--color-off-white);
-      color: var(--color-off-white);
-    }
-
-    .btn-light:hover {
-      background-color: var(--color-off-white);
-      color: var(--color-black);
-    }
-
-    /* ==========================================================================
-       Hero Section
-       ========================================================================== */
-    .hero {
-      padding-top: calc(72px + var(--space-3xl));
-      padding-bottom: var(--space-3xl);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .hero-tagline {
-      margin-bottom: var(--space-md);
-    }
-
-    .hero-title {
-      margin-bottom: var(--space-lg);
-      max-width: 900px;
-    }
-
-    .hero-subtitle {
-      font-size: clamp(16px, 2vw, 18px);
-      line-height: 1.7;
-      color: var(--color-dark-grey);
-      max-width: 720px;
-      margin-bottom: var(--space-2xl);
-    }
-
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: var(--space-lg);
-      padding-top: var(--space-xl);
-      border-top: 1px solid var(--color-light-grey);
-    }
-
-    .stat-item {
-      text-align: left;
-    }
-
-    .stat-value {
-      font-size: clamp(24px, 4vw, 32px);
-      font-weight: 700;
-      margin-bottom: var(--space-xs);
-      line-height: 1;
-    }
-
-    .stat-label {
-      font-size: 14px;
-      color: var(--color-mid-grey);
-    }
-
-    /* Fade-in animation for hero */
-    .hero-content > * {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 0.6s ease forwards;
-    }
-
-    .hero-content > *:nth-child(1) { animation-delay: 0.1s; }
-    .hero-content > *:nth-child(2) { animation-delay: 0.2s; }
-    .hero-content > *:nth-child(3) { animation-delay: 0.3s; }
-    .hero-content > *:nth-child(4) { animation-delay: 0.4s; }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* ==========================================================================
-       Services Section
-       ========================================================================== */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--space-lg);
-    }
-
-    .service-card {
-      padding: var(--space-lg);
-      border: 1px solid var(--color-dark-grey);
-      transition: all var(--transition-base);
-    }
-
-    .service-card:hover {
-      border-color: var(--color-mid-grey);
-      transform: translateY(-4px);
-    }
-
-    .service-number {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--color-mid-grey);
-      margin-bottom: var(--space-md);
-    }
-
-    .service-card .card-title {
-      color: var(--color-off-white);
-    }
-
-    .service-description {
-      font-size: 15px;
-      line-height: 1.6;
-      color: rgba(255, 255, 255, 0.8);
-      margin-bottom: var(--space-md);
-    }
-
-    .service-features {
-      padding-top: var(--space-sm);
-      border-top: 1px solid var(--color-dark-grey);
-    }
-
-    .service-features li {
-      font-size: 14px;
-      color: rgba(255, 255, 255, 0.7);
-      padding: var(--space-xs) 0;
-      padding-left: var(--space-sm);
-      position: relative;
-    }
-
-    .service-features li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 50%;
-      width: 4px;
-      height: 4px;
-      background-color: var(--color-mid-grey);
-    }
-
-    /* ==========================================================================
-       Expertise Section
-       ========================================================================== */
-    .expertise-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--space-xl);
-    }
-
-    .expertise-category h3 {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: var(--space-sm);
-      padding-bottom: var(--space-sm);
-      border-bottom: 2px solid var(--color-black);
-    }
-
-    .expertise-category ul {
-      list-style: none;
-    }
-
-    .expertise-category li {
-      font-size: 15px;
-      color: var(--color-dark-grey);
-      padding: var(--space-xs) 0;
-      padding-left: var(--space-sm);
-      position: relative;
-    }
-
-    .expertise-category li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 50%;
-      width: 4px;
-      height: 4px;
-      background-color: var(--color-black);
-    }
-
-    /* ==========================================================================
-       Approach Section
-       ========================================================================== */
-    .approach-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: var(--space-lg);
-    }
-
-    .approach-card {
-      padding: var(--space-lg);
-      background-color: var(--color-white);
-      border: 1px solid var(--color-light-grey);
-      transition: all var(--transition-base);
-    }
-
-    .approach-card:hover {
-      border-color: var(--color-black);
-      transform: translateY(-4px);
-    }
-
-    .approach-card h3 {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: var(--space-sm);
-    }
-
-    .approach-card p {
-      font-size: 14px;
-      color: var(--color-dark-grey);
-      line-height: 1.6;
-    }
-
-    /* ==========================================================================
-       About Section
-       ========================================================================== */
-    .about-layout {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: var(--space-2xl);
-    }
-
-    .about-sidebar {
-      padding-right: var(--space-xl);
-      border-right: 1px solid var(--color-light-grey);
-    }
-
-    .about-highlight {
-      font-size: 20px;
-      font-weight: 500;
-      line-height: 1.5;
-      margin-bottom: var(--space-lg);
-      color: var(--color-black);
-    }
-
-    .about-details {
-      padding-top: var(--space-lg);
-      border-top: 1px solid var(--color-light-grey);
-    }
-
-    .about-detail-item {
-      margin-bottom: var(--space-md);
-    }
-
-    .about-detail-item .label {
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .about-detail-item p {
-      font-size: 15px;
-      color: var(--color-dark-grey);
-    }
-
-    .about-content {
-      column-count: 1;
-    }
-
-    .about-content p {
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--color-dark-grey);
-      margin-bottom: var(--space-md);
-    }
-
-    .about-content p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* ==========================================================================
-       Contact Section
-       ========================================================================== */
-    .contact {
-      text-align: center;
-      padding: var(--space-3xl) 0;
-    }
-
-    .contact-title {
-      font-size: clamp(32px, 5vw, 48px);
-      margin-bottom: var(--space-lg);
-      color: var(--color-off-white);
-    }
-
-    .contact-email {
-      font-size: clamp(24px, 4vw, 36px);
-      font-weight: 500;
-      color: var(--color-off-white);
-      text-decoration: underline;
-      text-underline-offset: 8px;
-      transition: color var(--transition-base);
-      display: inline-block;
-      margin-bottom: var(--space-lg);
-    }
-
-    .contact-email:hover {
-      color: var(--color-light-grey);
-    }
-
-    .contact-subtext {
-      font-size: 16px;
-      color: rgba(255, 255, 255, 0.7);
-      margin-bottom: var(--space-sm);
-    }
-
-    .contact-timezone {
-      font-size: 14px;
-      color: var(--color-mid-grey);
-    }
-
-    /* ==========================================================================
-       Footer
-       ========================================================================== */
-    .footer {
-      padding: var(--space-lg) 0;
-      background-color: var(--color-black);
-      border-top: 1px solid var(--color-dark-grey);
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .footer-copyright {
-      font-size: 14px;
-      color: var(--color-mid-grey);
-    }
-
-    .footer-note {
-      font-size: 12px;
-      color: var(--color-mid-grey);
-    }
-
-    /* ==========================================================================
-       Responsive Styles
-       ========================================================================== */
-    @media (max-width: 1024px) {
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .approach-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .about-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .about-sidebar {
-        padding-right: 0;
-        border-right: none;
-        padding-bottom: var(--space-lg);
-        border-bottom: 1px solid var(--color-light-grey);
-      }
-    }
-
-    @media (max-width: 768px) {
-      :root {
-        --space-3xl: 64px;
-        --grid-gap: 32px;
-      }
-
-      .hero-stats {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--space-md);
-      }
-
-      .expertise-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-lg);
-      }
-
-      .approach-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        gap: var(--space-sm);
-        text-align: center;
-      }
-
-      .section-title {
-        margin-bottom: var(--space-lg);
-      }
-    }
-
-    @media (max-width: 480px) {
-      .header-inner {
-        height: 64px;
-      }
-
-      .hero {
-        padding-top: calc(64px + var(--space-2xl));
-        min-height: auto;
-      }
-
-      .hero-stats {
-        grid-template-columns: 1fr;
-      }
-
-      .btn {
-        padding: 10px 20px;
-        font-size: 13px;
-      }
-    }
-
-    /* ==========================================================================
-       Accessibility
-       ========================================================================== */
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      .hero-content > * {
-        animation: none;
-        opacity: 1;
-        transform: none;
-      }
-
-      .service-card:hover,
-      .approach-card:hover {
-        transform: none;
-      }
-    }
-
-    /* Focus styles for keyboard navigation */
-    a:focus-visible,
-    button:focus-visible {
-      outline: 2px solid var(--color-black);
-      outline-offset: 2px;
-    }
-
-    .section-dark a:focus-visible,
-    .section-dark button:focus-visible {
-      outline-color: var(--color-off-white);
-    }
-
-    /* Skip link for accessibility */
-    .skip-link {
-      position: absolute;
-      top: -100%;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 12px 24px;
-      background-color: var(--color-black);
-      color: var(--color-off-white);
-      font-weight: 600;
-      z-index: 9999;
-      transition: top 0.3s;
-    }
-
-    .skip-link:focus {
-      top: 12px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>viewstate consulting | IT Infrastructure & Technology Leadership | Dubai</title>
+    <meta name="description" content="Expert IT infrastructure consulting and fractional technology leadership for growing companies in Dubai and internationally. VIP IT advisory services.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@700&family=Roboto+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Colors */
+            --color-dark-navy: #222831;
+            --color-charcoal: #393E46;
+            --color-taupe: #948979;
+            --color-cream: #DFD0B8;
+            --color-off-white: #f5f5f5;
+            --color-off-white: #f5f5f5;
+            --color-accent: #948979; /* Taupe accent */
+            
+            /* Typography */
+            --font-display: 'Bitter', Georgia, serif;
+            --font-mono: 'Roboto Mono', monospace;
+            
+            /* Spacing */
+            --spacing-unit: 8px;
+            --max-width: 1200px;
+            
+            /* Transitions */
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Base Styles */
+        body {
+            font-family: var(--font-mono);
+            background: linear-gradient(180deg, #E8DCC8 0%, var(--color-cream) 50%, var(--color-off-white) 100%);
+            min-height: 100vh;
+            color: var(--color-dark-navy);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-weight: 400;
+        }
+
+        ::selection {
+            background: var(--color-accent);
+            color: var(--color-cream);
+        }
+
+        /* Header */
+        header {
+            padding: clamp(24px, 4vw, 32px) clamp(20px, 5vw, 40px);
+            border-bottom: 1px solid var(--color-light-taupe);
+            background: var(--color-cream);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -0.02em;
+        }
+
+        .contact-link {
+            font-family: var(--font-mono);
+            font-size: clamp(10px, 1.3vw, 11px);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--color-dark-navy);
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid var(--color-dark-navy);
+            transition: var(--transition);
+            white-space: nowrap;
+            display: inline-block;
+        }
+
+        .contact-link:hover {
+            background: var(--color-dark-navy);
+            color: var(--color-cream);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: clamp(80px, 12vw, 160px) clamp(20px, 5vw, 40px) clamp(60px, 10vw, 120px);
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .tagline {
+            font-size: clamp(10px, 1.2vw, 12px);
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: clamp(24px, 4vw, 32px);
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(32px, 6vw, 64px);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: clamp(24px, 4vw, 32px);
+            max-width: 960px;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(14px, 1.8vw, 17px);
+            line-height: 1.7;
+            color: var(--color-charcoal);
+            max-width: 740px;
+            margin-bottom: clamp(48px, 8vw, 64px);
+            font-weight: 700;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: clamp(24px, 4vw, 48px);
+            padding-top: clamp(32px, 5vw, 48px);
+            border-top: 1px solid var(--color-light-taupe);
+            max-width: 800px;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: clamp(38px, 6vw, 52px);
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -0.02em;
+        }
+
+        .stat-label {
+            font-size: clamp(12px, 1.5vw, 14px);
+            color: var(--color-taupe);
+            font-weight: 700;
+            line-height: 1.5;
+        }
+
+        /* Services Section */
+        .services {
+            background: linear-gradient(180deg, #1a1f26 0%, var(--color-dark-navy) 40%, var(--color-charcoal) 100%);
+            color: var(--color-cream);
+            padding: clamp(64px, 10vw, 120px) clamp(20px, 5vw, 40px);
+        }
+
+        .services-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-size: clamp(10px, 1.2vw, 12px);
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: clamp(16px, 3vw, 24px);
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(20px, 3.5vw, 38px);
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin-bottom: clamp(48px, 8vw, 72px);
+            max-width: 100%;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+            gap: clamp(32px, 5vw, 48px);
+        }
+
+        .service-card {
+            padding: clamp(32px, 5vw, 40px);
+            border: 1px solid var(--color-charcoal);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            border-color: var(--color-accent);
+            transform: translateY(-2px);
+        }
+
+        .service-number {
+            font-size: clamp(12px, 1.5vw, 14px);
+            font-weight: 600;
+            color: var(--color-taupe);
+            margin-bottom: clamp(16px, 2vw, 20px);
+            letter-spacing: 0.1em;
+        }
+
+        .service-title {
+            font-family: var(--font-display);
+            font-size: clamp(20px, 3vw, 26px);
+            font-weight: 700;
+            margin-bottom: clamp(16px, 2vw, 20px);
+            letter-spacing: -0.01em;
+            line-height: 1.3;
+        }
+
+        .service-description {
+            font-size: clamp(13px, 1.6vw, 15px);
+            line-height: 1.7;
+            color: var(--color-light-taupe);
+            margin-bottom: clamp(20px, 3vw, 28px);
+        }
+
+        .service-features {
+            list-style: none;
+            font-size: clamp(12px, 1.4vw, 14px);
+            color: var(--color-taupe);
+            line-height: 1.8;
+        }
+
+        .service-features li {
+            padding-left: 16px;
+            position: relative;
+            margin-bottom: 8px;
+        }
+
+        .service-features li:before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+        }
+
+        /* Expertise Section */
+        .expertise {
+            padding: clamp(64px, 10vw, 120px) clamp(20px, 5vw, 40px);
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+            gap: clamp(24px, 4vw, 32px);
+            margin-top: clamp(40px, 6vw, 64px);
+        }
+
+        .expertise-category {
+            margin-bottom: clamp(40px, 6vw, 56px);
+        }
+
+        .expertise-category:last-child {
+            margin-bottom: 0;
+        }
+
+        .expertise-category-title {
+            font-family: var(--font-display);
+            font-size: clamp(17px, 2.2vw, 20px);
+            font-weight: 700;
+            margin-bottom: clamp(12px, 2vw, 16px);
+            letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            line-height: 1.3;
+        }
+
+        .expertise-icon {
+            font-family: var(--font-mono);
+            font-size: clamp(18px, 2.5vw, 22px);
+            color: var(--color-accent);
+            font-weight: 700;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+
+        .expertise-items {
+            list-style: none;
+            font-size: clamp(13px, 1.6vw, 15px);
+            color: var(--color-charcoal);
+            line-height: 1.8;
+        }
+
+        .expertise-items li {
+            padding-left: 16px;
+            position: relative;
+            margin-bottom: 6px;
+        }
+
+        .expertise-items li:before {
+            content: "·";
+            position: absolute;
+            left: 0;
+            font-weight: 700;
+            color: var(--color-accent);
+        }
+
+        /* Approach Section */
+        .approach {
+            background: linear-gradient(180deg, #a89885 0%, var(--color-taupe) 50%, var(--color-light-taupe) 100%);
+            padding: clamp(64px, 10vw, 120px) clamp(20px, 5vw, 40px);
+        }
+
+        .approach-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+            gap: clamp(24px, 4vw, 40px);
+            margin-top: clamp(40px, 6vw, 64px);
+        }
+
+        .approach-item {
+            background: var(--color-cream);
+            padding: clamp(28px, 4vw, 36px);
+            border: 1px solid var(--color-charcoal);
+            transition: var(--transition);
+        }
+
+        .approach-item:hover {
+            border-color: var(--color-accent);
+        }
+
+        .approach-symbol {
+            font-size: clamp(24px, 4vw, 32px);
+            margin-bottom: clamp(16px, 2vw, 20px);
+            line-height: 1;
+            color: var(--color-accent);
+            font-weight: 700;
+        }
+
+        .approach-title {
+            font-family: var(--font-display);
+            font-size: clamp(16px, 2vw, 19px);
+            font-weight: 700;
+            margin-bottom: clamp(12px, 2vw, 16px);
+            letter-spacing: -0.01em;
+        }
+
+        .approach-text {
+            font-size: clamp(12px, 1.5vw, 14px);
+            line-height: 1.7;
+            color: var(--color-charcoal);
+        }
+
+        /* About Section */
+        .about {
+            padding: clamp(64px, 10vw, 120px) clamp(20px, 5vw, 40px);
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+            gap: clamp(40px, 6vw, 80px);
+            margin-top: clamp(40px, 6vw, 64px);
+        }
+
+        .about-highlight {
+            font-family: var(--font-display);
+            font-size: clamp(20px, 3vw, 28px);
+            font-weight: 700;
+            line-height: 1.4;
+            letter-spacing: -0.01em;
+            margin-bottom: clamp(24px, 4vw, 32px);
+        }
+
+        .about-details {
+            font-size: clamp(12px, 1.5vw, 14px);
+            color: var(--color-taupe);
+            line-height: 1.9;
+        }
+
+        .about-details p {
+            margin-bottom: 8px;
+        }
+
+        .about-details strong {
+            color: var(--color-dark-navy);
+            font-weight: 600;
+        }
+
+        .about-text {
+            font-size: clamp(14px, 1.8vw, 16px);
+            line-height: 1.8;
+            color: var(--color-charcoal);
+        }
+
+        .about-text p {
+            margin-bottom: clamp(20px, 3vw, 24px);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(180deg, var(--color-charcoal) 0%, var(--color-dark-navy) 60%, #1a1f26 100%);
+            color: var(--color-cream);
+            padding: clamp(64px, 10vw, 120px) clamp(20px, 5vw, 40px);
+        }
+
+        .contact-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-title {
+            font-family: var(--font-display);
+            font-size: clamp(32px, 6vw, 56px);
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin-bottom: clamp(32px, 5vw, 48px);
+        }
+
+        .contact-email {
+            font-size: clamp(18px, 3vw, 26px);
+            color: var(--color-cream);
+            text-decoration: none;
+            display: inline-block;
+            padding: clamp(12px, 2vw, 16px) 0;
+            border-bottom: 2px solid var(--color-accent);
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .contact-email:hover {
+            color: var(--color-accent);
+            border-color: var(--color-cream);
+        }
+
+        .contact-meta {
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: clamp(48px, 8vw, 64px) auto 0;
+        }
+
+        .form-group {
+            margin-bottom: clamp(20px, 3vw, 24px);
+        }
+
+        .form-label {
+            font-family: var(--font-mono);
+            font-size: clamp(11px, 1.4vw, 13px);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-accent);
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: clamp(12px, 2vw, 16px);
+            font-family: var(--font-mono);
+            font-size: clamp(13px, 1.6vw, 15px);
+            background: transparent;
+            border: 1px solid var(--color-charcoal);
+            color: var(--color-cream);
+            transition: var(--transition);
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--color-accent);
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: var(--color-taupe);
+            opacity: 0.6;
+        }
+
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            font-family: var(--font-mono);
+            font-size: clamp(11px, 1.4vw, 13px);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-cream);
+            background: transparent;
+            border: 1px solid var(--color-cream);
+            padding: clamp(12px, 2vw, 16px) clamp(32px, 5vw, 48px);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .form-submit:hover {
+            background: var(--color-cream);
+            color: var(--color-dark-navy);
+        }
+
+        .form-submit:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+            margin-top: clamp(32px, 5vw, 48px);
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: clamp(48px, 8vw, 64px) auto 0;
+        }
+
+        .form-group {
+            margin-bottom: clamp(20px, 3vw, 24px);
+        }
+
+        .form-label {
+            font-family: var(--font-mono);
+            font-size: clamp(11px, 1.4vw, 13px);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-accent);
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: clamp(12px, 2vw, 16px);
+            font-family: var(--font-mono);
+            font-size: clamp(13px, 1.6vw, 15px);
+            background: transparent;
+            border: 1px solid var(--color-charcoal);
+            color: var(--color-cream);
+            transition: var(--transition);
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--color-accent);
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: var(--color-taupe);
+            opacity: 0.6;
+        }
+
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            font-family: var(--font-mono);
+            font-size: clamp(11px, 1.4vw, 13px);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-cream);
+            background: transparent;
+            border: 1px solid var(--color-cream);
+            padding: clamp(12px, 2vw, 16px) clamp(32px, 5vw, 48px);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .form-submit:hover {
+            background: var(--color-cream);
+            color: var(--color-dark-navy);
+        }
+
+        .form-submit:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+            font-size: clamp(12px, 1.5vw, 14px);
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: clamp(48px, 8vw, 64px) auto 0;
+        }
+
+        .form-group {
+            margin-bottom: clamp(20px, 3vw, 24px);
+        }
+
+        .form-label {
+            font-family: var(--font-mono);
+            font-size: clamp(11px, 1.4vw, 13px);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-accent);
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: clamp(12px, 2vw, 16px);
+            font-family: var(--font-mono);
+            font-size: clamp(13px, 1.6vw, 15px);
+            background: transparent;
+            border: 1px solid var(--color-charcoal);
+            color: var(--color-cream);
+            transition: var(--transition);
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--color-accent);
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: var(--color-taupe);
+            opacity: 0.6;
+        }
+
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            font-family: var(--font-mono);
+            font-size: clamp(11px, 1.4vw, 13px);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-cream);
+            background: transparent;
+            border: 1px solid var(--color-cream);
+            padding: clamp(12px, 2vw, 16px) clamp(32px, 5vw, 48px);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .form-submit:hover {
+            background: var(--color-cream);
+            color: var(--color-dark-navy);
+        }
+
+        .form-submit:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+            color: var(--color-taupe);
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: clamp(48px, 8vw, 64px) auto 0;
+        }
+
+        .form-group {
+            margin-bottom: clamp(20px, 3vw, 24px);
+        }
+
+        .form-label {
+            font-family: var(--font-mono);
+            font-size: clamp(11px, 1.4vw, 13px);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-accent);
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: clamp(12px, 2vw, 16px);
+            font-family: var(--font-mono);
+            font-size: clamp(13px, 1.6vw, 15px);
+            background: transparent;
+            border: 1px solid var(--color-charcoal);
+            color: var(--color-cream);
+            transition: var(--transition);
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--color-accent);
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: var(--color-taupe);
+            opacity: 0.6;
+        }
+
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            font-family: var(--font-mono);
+            font-size: clamp(11px, 1.4vw, 13px);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-cream);
+            background: transparent;
+            border: 1px solid var(--color-cream);
+            padding: clamp(12px, 2vw, 16px) clamp(32px, 5vw, 48px);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .form-submit:hover {
+            background: var(--color-cream);
+            color: var(--color-dark-navy);
+        }
+
+        .form-submit:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+            line-height: 1.8;
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: clamp(48px, 8vw, 64px) auto 0;
+        }
+
+        .form-group {
+            margin-bottom: clamp(20px, 3vw, 24px);
+        }
+
+        .form-label {
+            font-family: var(--font-mono);
+            font-size: clamp(11px, 1.4vw, 13px);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-accent);
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: clamp(12px, 2vw, 16px);
+            font-family: var(--font-mono);
+            font-size: clamp(13px, 1.6vw, 15px);
+            background: transparent;
+            border: 1px solid var(--color-charcoal);
+            color: var(--color-cream);
+            transition: var(--transition);
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--color-accent);
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: var(--color-taupe);
+            opacity: 0.6;
+        }
+
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            font-family: var(--font-mono);
+            font-size: clamp(11px, 1.4vw, 13px);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-cream);
+            background: transparent;
+            border: 1px solid var(--color-cream);
+            padding: clamp(12px, 2vw, 16px) clamp(32px, 5vw, 48px);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .form-submit:hover {
+            background: var(--color-cream);
+            color: var(--color-dark-navy);
+        }
+
+        .form-submit:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: clamp(48px, 8vw, 64px) auto 0;
+        }
+
+        .form-group {
+            margin-bottom: clamp(20px, 3vw, 24px);
+        }
+
+        .form-label {
+            font-family: var(--font-mono);
+            font-size: clamp(11px, 1.4vw, 13px);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-accent);
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: clamp(12px, 2vw, 16px);
+            font-family: var(--font-mono);
+            font-size: clamp(13px, 1.6vw, 15px);
+            background: transparent;
+            border: 1px solid var(--color-charcoal);
+            color: var(--color-cream);
+            transition: var(--transition);
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--color-accent);
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: var(--color-taupe);
+            opacity: 0.6;
+        }
+
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            font-family: var(--font-mono);
+            font-size: clamp(11px, 1.4vw, 13px);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-cream);
+            background: transparent;
+            border: 1px solid var(--color-cream);
+            padding: clamp(12px, 2vw, 16px) clamp(32px, 5vw, 48px);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .form-submit:hover {
+            background: var(--color-cream);
+            color: var(--color-dark-navy);
+        }
+
+        .form-submit:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .contact-meta p {
+            margin-bottom: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-dark-navy);
+            color: var(--color-taupe);
+            padding: clamp(24px, 4vw, 32px) clamp(20px, 5vw, 40px);
+            border-top: 1px solid var(--color-charcoal);
+        }
+
+        .footer-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            font-size: clamp(11px, 1.3vw, 12px);
+            flex-wrap: wrap;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero > * {
+            animation: fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            opacity: 0;
+        }
+
+        .tagline {
+            animation-delay: 0.1s;
+        }
+
+        .hero-title {
+            animation-delay: 0.2s;
+        }
+
+        .hero-subtitle {
+            animation-delay: 0.3s;
+        }
+
+        .stats {
+            animation-delay: 0.4s;
+        }
+
+        /* Media Queries for Fine-tuning */
+        @media (max-width: 600px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .contact-link {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- Skip Link for Accessibility -->
-  <a href="#main" class="skip-link">Skip to main content</a>
-
-  <!-- Header -->
-  <header class="header" id="header">
-    <div class="container">
-      <div class="header-inner">
-        <a href="#" class="logo" aria-label="Viewstate Consulting Home">viewstate</a>
-        <a href="#contact" class="btn">Get In Touch</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Main Content -->
-  <main id="main">
-    <!-- Hero Section -->
-    <section class="hero section" id="hero">
-      <div class="container">
-        <div class="hero-content">
-          <p class="label hero-tagline">Dubai-Based · Global Reach</p>
-          <h1 class="hero-title">Expert IT Infrastructure & Technology Leadership for Growing Companies</h1>
-          <p class="hero-subtitle">Strategic consulting and fractional technology leadership that transforms IT from operational overhead into a competitive advantage. From infrastructure optimization to AI-assisted modernization, we deliver high-value solutions for ambitious organizations.</p>
-          <div class="hero-stats">
-            <div class="stat-item">
-              <p class="stat-value">15+</p>
-              <p class="stat-label">Years Experience</p>
-            </div>
-            <div class="stat-item">
-              <p class="stat-value">600+</p>
-              <p class="stat-label">Users Supported</p>
-            </div>
-            <div class="stat-item">
-              <p class="stat-value">10+</p>
-              <p class="stat-label">Countries Served</p>
-            </div>
-            <div class="stat-item">
-              <p class="stat-value">GMT+4</p>
-              <p class="stat-label">Timezone Coverage</p>
-            </div>
-          </div>
+    <header>
+        <div class="header-content">
+            <div class="logo">viewstate consulting</div>
+            <a href="https://wa.me/971501234567" target="_blank" class="contact-link">whatsapp for business</a>
         </div>
-      </div>
-    </section>
+    </header>
 
-    <!-- Services Section -->
-    <section class="section section-dark" id="services">
-      <div class="container">
-        <p class="label label-light">Our Services</p>
-        <h2 class="section-title">Comprehensive IT Solutions Tailored to Your Business</h2>
-        <div class="services-grid">
-          <!-- Service 01 -->
-          <article class="service-card">
-            <p class="service-number">01</p>
-            <h3 class="card-title">Fractional IT Leadership</h3>
-            <p class="service-description">Strategic technology guidance without the full-time commitment. Expert leadership for companies needing senior IT direction but not requiring a permanent CTO or IT Director.</p>
-            <ul class="service-features">
-              <li>Technology strategy & roadmap development</li>
-              <li>IT budget planning & vendor negotiations</li>
-              <li>Team mentorship & skill development</li>
-              <li>Executive stakeholder management</li>
-            </ul>
-          </article>
+    <main>
+        <section class="hero">
+            <div class="tagline">Dubai · Global Reach</div>
+            <h1 class="hero-title">Expert IT Infrastructure & Technology Leadership for Growing Companies</h1>
+            <p class="hero-subtitle">
+                A generalist approach to an AI-powered era. Strategic consulting and technology leadership that transforms IT from operational overhead into competitive advantage. From infrastructure optimization to AI-assisted modernization, we deliver high-value solutions for ambitious organizations.
+            </p>
+        </section>
 
-          <!-- Service 02 -->
-          <article class="service-card">
-            <p class="service-number">02</p>
-            <h3 class="card-title">Infrastructure Management & Optimization</h3>
-            <p class="service-description">Complete infrastructure lifecycle management from assessment to optimization. We ensure your IT environment is stable, secure, and cost-efficient while supporting business growth.</p>
-            <ul class="service-features">
-              <li>Cloud & hybrid infrastructure design</li>
-              <li>Microsoft 365 & Azure administration</li>
-              <li>VMware & virtualization management</li>
-              <li>Backup, disaster recovery & business continuity</li>
-            </ul>
-          </article>
+        <section class="services">
+            <div class="services-content">
+                <div class="section-label">what we do</div>
+                <h2 class="section-title">Comprehensive IT Solutions Tailored to Your Business</h2>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-number">01</div>
+                        <h3 class="service-title">Infrastructure Management & Optimization</h3>
+                        <p class="service-description">
+                            Complete infrastructure lifecycle management from assessment to optimization. We ensure your IT environment is stable, secure, and cost-efficient while supporting business growth.
+                        </p>
+                        <ul class="service-features">
+                            <li>Cloud & hybrid infrastructure</li>
+                            <li>Microsoft 365 & Azure administration</li>
+                            <li>VMware & virtualization management</li>
+                            <li>Backup, disaster recovery & business continuity</li>
+                        </ul>
+                    </div>
 
-          <!-- Service 03 -->
-          <article class="service-card">
-            <p class="service-number">03</p>
-            <h3 class="card-title">Software Asset Management & IT Governance</h3>
-            <p class="service-description">Comprehensive license optimization and vendor management to reduce costs and ensure compliance. Transform complex licensing into actionable insights and measurable savings.</p>
-            <ul class="service-features">
-              <li>License usage analysis & optimization</li>
-              <li>Vendor contract negotiations</li>
-              <li>Audit readiness & compliance</li>
-              <li>ServiceNow SAM implementation</li>
-            </ul>
-          </article>
+                    <div class="service-card">
+                        <div class="service-number">02</div>
+                        <h3 class="service-title">VIP IT Advisory Services</h3>
+                        <p class="service-description">
+                            Premium, personalized IT consulting for high-net-worth individuals and luxury clients in Dubai. Discreet, responsive, and tailored technology solutions for your unique requirements.
+                        </p>
+                        <ul class="service-features">
+                            <li>Personal technology consulting</li>
+                            <li>Private office IT infrastructure</li>
+                            <li>Luxury home technology integration</li>
+                            <li>White-glove support & service</li>
+                        </ul>
+                    </div>
 
-          <!-- Service 04 -->
-          <article class="service-card">
-            <p class="service-number">04</p>
-            <h3 class="card-title">AI-Assisted Modernization</h3>
-            <p class="service-description">Leverage cutting-edge AI tools to accelerate IT projects and solve complex problems faster. Consulting on AI integration for enterprise and mid-size companies ready to modernize.</p>
-            <ul class="service-features">
-              <li>AI strategy & tool assessment</li>
-              <li>Process automation opportunities</li>
-              <li>Enterprise AI implementation guidance</li>
-              <li>Training on emerging AI capabilities</li>
-            </ul>
-          </article>
+                    <div class="service-card">
+                        <div class="service-number">03</div>
+                        <h3 class="service-title">Software Asset Management</h3>
+                        <p class="service-description">
+                            Comprehensive license optimization and vendor management to reduce costs and ensure compliance. Transform complex licensing into actionable insights and measurable savings.
+                        </p>
+                        <ul class="service-features">
+                            <li>License usage analysis & optimization</li>
+                            <li>Vendor contract negotiations</li>
+                            <li>Audit readiness & compliance</li>
+                            <li>ServiceNow SAM implementation</li>
+                        </ul>
+                    </div>
 
-          <!-- Service 05 -->
-          <article class="service-card">
-            <p class="service-number">05</p>
-            <h3 class="card-title">IT Project Delivery</h3>
-            <p class="service-description">End-to-end project management for infrastructure initiatives, office relocations, system migrations, and technology rollouts. Delivered on time, within scope, and within budget.</p>
-            <ul class="service-features">
-              <li>Office relocations & IT setup</li>
-              <li>System migrations & upgrades</li>
-              <li>Regional IT standardization</li>
-              <li>Cross-functional project coordination</li>
-            </ul>
-          </article>
+                    <div class="service-card">
+                        <div class="service-number">04</div>
+                        <h3 class="service-title">AI-Assisted Modernization</h3>
+                        <p class="service-description">
+                            Leverage cutting-edge AI tools to accelerate IT projects and solve complex problems faster. Consulting on AI integration for enterprise and mid-size companies ready to modernize.
+                        </p>
+                        <ul class="service-features">
+                            <li>AI strategy & tool assessment</li>
+                            <li>Process automation opportunities</li>
+                            <li>Training on emerging AI capabilities</li>
+                        </ul>
+                    </div>
 
-          <!-- Service 06 -->
-          <article class="service-card">
-            <p class="service-number">06</p>
-            <h3 class="card-title">VIP IT Advisory Services</h3>
-            <p class="service-description">Premium, personalized IT consulting for high-net-worth individuals and luxury clients in Dubai. Discreet, responsive, and tailored technology solutions for your unique requirements.</p>
-            <ul class="service-features">
-              <li>Personal technology consulting</li>
-              <li>Private office IT infrastructure</li>
-              <li>Luxury home technology integration</li>
-              <li>White-glove support & service</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Technical Expertise Section -->
-    <section class="section section-white" id="expertise">
-      <div class="container">
-        <p class="label">Technical Expertise</p>
-        <h2 class="section-title">Deep Technical Knowledge Across the Full IT Stack</h2>
-        <div class="expertise-grid">
-          <div class="expertise-category">
-            <h3>Cloud & Identity</h3>
-            <ul>
-              <li>Microsoft 365 tenant architecture</li>
-              <li>Azure Entra ID & Conditional Access</li>
-              <li>Hybrid cloud integration</li>
-              <li>Microsoft Intune device management</li>
-            </ul>
-          </div>
-
-          <div class="expertise-category">
-            <h3>Infrastructure & Virtualization</h3>
-            <ul>
-              <li>Windows Server (2012-2022)</li>
-              <li>VMware vSphere deployment</li>
-              <li>Active Directory architecture</li>
-              <li>Network design & management</li>
-            </ul>
-          </div>
-
-          <div class="expertise-category">
-            <h3>Security & Compliance</h3>
-            <ul>
-              <li>CrowdStrike endpoint security</li>
-              <li>Vulnerability management</li>
-              <li>Audit preparation & documentation</li>
-              <li>Policy development & enforcement</li>
-            </ul>
-          </div>
-
-          <div class="expertise-category">
-            <h3>Asset Management & Optimization</h3>
-            <ul>
-              <li>Software Asset Management (SAM)</li>
-              <li>ServiceNow platform delivery</li>
-              <li>License optimization & cost reduction</li>
-              <li>Vendor relationship management</li>
-            </ul>
-          </div>
-
-          <div class="expertise-category">
-            <h3>Operations & Automation</h3>
-            <ul>
-              <li>PowerShell automation</li>
-              <li>Backup & disaster recovery (Veeam)</li>
-              <li>Application packaging workflows</li>
-              <li>Remote infrastructure management</li>
-            </ul>
-          </div>
-
-          <div class="expertise-category">
-            <h3>AI & Emerging Technology</h3>
-            <ul>
-              <li>OpenAI & GPT integration</li>
-              <li>Claude AI & Anthropic tools</li>
-              <li>Google Gemini applications</li>
-              <li>Enterprise AI strategy</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Approach Section -->
-    <section class="section section-grey" id="approach">
-      <div class="container">
-        <p class="label">Our Approach</p>
-        <h2 class="section-title">Modern, Agile, and Results-Focused</h2>
-        <div class="approach-grid">
-          <article class="approach-card">
-            <h3>Fast & AI-Assisted</h3>
-            <p>We leverage cutting-edge AI tools to solve problems that traditionally took months or years. Modern solutions for modern challenges.</p>
-          </article>
-
-          <article class="approach-card">
-            <h3>Clear Communication</h3>
-            <p>Honest, direct, and transparent communication with all stakeholders. No jargon, no excuses, just clarity and results.</p>
-          </article>
-
-          <article class="approach-card">
-            <h3>Remote-First</h3>
-            <p>Proven remote collaboration across multiple time zones. Flexible engagement models that work for international and regional clients.</p>
-          </article>
-
-          <article class="approach-card">
-            <h3>Hands-On Expertise</h3>
-            <p>Not just strategy—we roll up our sleeves and deliver. From planning through implementation, we're with you every step.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="section section-white" id="about">
-      <div class="container">
-        <p class="label">About</p>
-        <h2 class="section-title">Global Experience, Local Presence</h2>
-        <div class="about-layout">
-          <aside class="about-sidebar">
-            <p class="about-highlight">15 years of IT leadership across APAC and EMEA, now bringing that expertise to Dubai and beyond.</p>
-            <div class="about-details">
-              <div class="about-detail-item">
-                <span class="label">Based</span>
-                <p>Dubai, UAE (GMT+4)</p>
-              </div>
-              <div class="about-detail-item">
-                <span class="label">Experience</span>
-                <p>Spain, UK, Japan, UAE</p>
-              </div>
-              <div class="about-detail-item">
-                <span class="label">Languages</span>
-                <p>English, Spanish, Japanese</p>
-              </div>
-              <div class="about-detail-item">
-                <span class="label">Certifications in Progress</span>
-                <p>ServiceNow CSA, ServiceNow SAM</p>
-              </div>
+                    <div class="service-card">
+                        <div class="service-number">05</div>
+                        <h3 class="service-title">IT Project Delivery</h3>
+                        <p class="service-description">
+                            End-to-end project management for infrastructure initiatives, office relocations, system migrations, and technology rollouts. Delivered on time, within scope, and within budget.
+                        </p>
+                        <ul class="service-features">
+                            <li>Office relocations & IT setup</li>
+                            <li>System migrations & upgrades</li>
+                            <li>Regional IT standardization</li>
+                            <li>Cross-functional project coordination</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </aside>
-          <div class="about-content">
-            <p>Viewstate Consulting was founded to bridge a critical gap in the market: companies need experienced IT leadership and infrastructure expertise, but don't always need (or can't justify) a full-time executive hire.</p>
-            <p>With 15 years of hands-on experience managing IT operations across APAC and EMEA, we understand the challenges that growing companies face. Whether it's scaling infrastructure to support rapid growth, optimizing software spend, navigating vendor relationships, or modernizing legacy systems—we've been there.</p>
-            <p>Our approach is different. We're not consultants who just write reports and disappear. We embed with your team, understand your business, and deliver practical solutions that work. We combine deep technical expertise with strategic thinking, enabling us to operate at every level—from troubleshooting day-to-day issues to advising C-suite leadership.</p>
-            <p>Our generalist background means we understand how all parts of IT work together—from networking and security to cloud architecture and asset management. This holistic perspective lets us identify root causes quickly and implement solutions that last.</p>
-            <p>What sets us apart is our modern, AI-assisted approach. We leverage tools like Claude, ChatGPT, and other emerging technologies to accelerate delivery and solve problems faster. What used to take months can now take weeks—or even days.</p>
-            <p>We work with companies who value quality over quantity, who want a trusted technology partner rather than just a vendor. Whether you need strategic leadership, hands-on project delivery, or specialized expertise for a specific initiative, we're here to help.</p>
-          </div>
+        </section>
+
+        <section class="expertise">
+            <div class="section-label">technical expertise</div>
+            <h2 class="section-title">Deep Technical Knowledge Across the Full IT Stack</h2>
+            <p style="font-size: clamp(13px, 1.6vw, 15px); color: var(--color-charcoal); max-width: 720px; margin-top: clamp(16px, 2vw, 20px);">Examples of technologies and platforms we have worked with in past projects</p>
+            
+            <div class="expertise-grid">
+                <div class="expertise-category">
+                    <h3 class="expertise-category-title">
+                        <span class="expertise-icon">[*]</span>
+                        Cloud & Identity
+                    </h3>
+                    <ul class="expertise-items">
+                        <li>Microsoft 365 tenant architecture</li>
+                        <li>Azure Entra ID & Conditional Access</li>
+                        <li>Hybrid cloud integration</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-category">
+                    <h3 class="expertise-category-title">
+                        <span class="expertise-icon">[+]</span>
+                        Infrastructure & Virtualization
+                    </h3>
+                    <ul class="expertise-items">
+                        <li>Windows Server (2012-2022)</li>
+                        <li>VMware vSphere deployment</li>
+                        <li>Active Directory architecture</li>
+                        <li>Network design & management</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-category">
+                    <h3 class="expertise-category-title">
+                        <span class="expertise-icon">[!]</span>
+                        Security & Compliance
+                    </h3>
+                    <ul class="expertise-items">
+                        <li>CrowdStrike endpoint security</li>
+                        <li>Vulnerability management</li>
+                        <li>Audit preparation & documentation</li>
+                        <li>Policy development & enforcement</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-category">
+                    <h3 class="expertise-category-title">
+                        <span class="expertise-icon">[=]</span>
+                        Asset Management
+                    </h3>
+                    <ul class="expertise-items">
+                        <li>Software Asset Management (SAM)</li>
+                        <li>ServiceNow platform delivery</li>
+                        <li>License optimization & cost reduction</li>
+                        <li>Vendor relationship management</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-category">
+                    <h3 class="expertise-category-title">
+                        <span class="expertise-icon">[~]</span>
+                        Operations & Automation
+                    </h3>
+                    <ul class="expertise-items">
+                        <li>PowerShell automation</li>
+                        <li>Backup & disaster recovery (Veeam)</li>
+                        <li>Remote infrastructure management</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-category">
+                    <h3 class="expertise-category-title">
+                        <span class="expertise-icon">[^]</span>
+                        AI & Emerging Technology
+                    </h3>
+                    <ul class="expertise-items">
+                        <li>OpenAI & GPT integration</li>
+                        <li>Claude AI & Anthropic tools</li>
+                        <li>Google Gemini applications</li>
+                        <li>Enterprise AI strategy</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="approach">
+            <div class="approach-content">
+                <div class="section-label">our approach</div>
+                <h2 class="section-title">Modern, Agile, and Results-Focused</h2>
+                
+                <div class="approach-grid">
+                    <div class="approach-item">
+                        <div class="approach-symbol">[//]</div>
+                        <h3 class="approach-title">Fast & AI-Assisted</h3>
+                        <p class="approach-text">
+                            We leverage cutting-edge AI tools to solve problems that traditionally took months or years. Modern solutions for modern challenges.
+                        </p>
+                    </div>
+
+                    <div class="approach-item">
+                        <div class="approach-symbol">[>>]</div>
+                        <h3 class="approach-title">Clear Communication</h3>
+                        <p class="approach-text">
+                            Honest, direct, and transparent communication with all stakeholders. No jargon, no excuses, just clarity and results.
+                        </p>
+                    </div>
+
+                    <div class="approach-item">
+                        <div class="approach-symbol">[@]</div>
+                        <h3 class="approach-title">Remote-First</h3>
+                        <p class="approach-text">
+                            Proven remote collaboration across multiple time zones. Flexible engagement models that work for international and regional clients.
+                        </p>
+                    </div>
+
+                    <div class="approach-item">
+                        <div class="approach-symbol">[##]</div>
+                        <h3 class="approach-title">Hands-On Expertise</h3>
+                        <p class="approach-text">
+                            Not just strategy. We roll up our sleeves and deliver. From planning through implementation, we're with you every step.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="section-label">about</div>
+            <h2 class="section-title">Global Experience,<br>Local Presence</h2>
+            
+            <div class="about-content">
+                <div>
+                    <div class="about-highlight">
+                        +15 years of IT experience across APAC and EMEA, now bringing that expertise to Dubai and beyond.
+                    </div>
+                    <div class="about-details">
+                        <p><strong>Based:</strong> Dubai, UAE (GMT+4)</p>
+                        <p><strong>Experience:</strong> Spain, UK, Japan, UAE</p>
+                        <p><strong>Languages:</strong> English, Spanish, Japanese</p>
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <p>
+                        Viewstate Consulting was founded to bridge a critical gap in the market: companies need experienced IT leadership and infrastructure expertise, but don't always need (or can't justify) a full-time senior hire.
+                    </p>
+                    <p>
+                        With 15 years of hands-on experience running IT operations across APAC and EMEA, we understand the challenges that growing companies face. Whether it's scaling infrastructure to support rapid growth, optimizing software spend, navigating vendor relationships, or modernizing legacy systems. We've been there.
+                    </p>
+                    <p>
+                        Our approach is different. We're not consultants who just write reports and disappear. We embed with your team, understand your business, and deliver practical solutions that work. We combine deep technical expertise with strategic thinking, enabling us to operate at every level, from troubleshooting day-to-day issues to advising C-suite leadership.
+                    </p>
+                    <p>
+                        Our generalist background means we understand how all parts of IT work together, from networking and security to cloud architecture and asset management. This holistic perspective lets us identify root causes quickly and implement solutions that last.
+                    </p>
+                    <p>
+                        What sets us apart is our modern, AI-assisted approach. We leverage tools like Claude, ChatGPT, and other emerging technologies to accelerate delivery and solve problems faster. What used to take months can now take weeks or even days.
+                    </p>
+                    <p>
+                        We work with companies who value quality over quantity, who want a trusted technology partner rather than just a vendor. Whether you need strategic leadership, hands-on project delivery, or specialized expertise for a specific initiative, we're here to help.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="contact-content">
+                <h2 class="contact-title">Let's Talk About Your IT Challenges</h2>
+                <div class="contact-meta">
+                    <p>Available for project-based engagements and retainer consulting</p>
+                    <p>Timezone: GMT+4 (Dubai, UAE)</p>
+                </div>
+
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company" class="form-label">Company (Optional)</label>
+                        <input type="text" id="company" name="company" class="form-input" placeholder="Company name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" name="message" class="form-textarea" placeholder="Tell us about your IT challenges..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>© 2026 viewstate consulting · Dubai, UAE</div>
+            <div>Built with precision and care</div>
         </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section section-dark contact" id="contact">
-      <div class="container">
-        <h2 class="contact-title">Let's Talk About Your IT Challenges</h2>
-        <a href="mailto:alex.abian@outlook.com" class="contact-email">alex.abian@outlook.com</a>
-        <p class="contact-subtext">Available for project-based engagements and retainer consulting</p>
-        <p class="contact-timezone">Timezone: GMT+4 (Dubai, UAE)</p>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <p class="footer-copyright">&copy; 2025 Viewstate Consulting. Dubai, UAE.</p>
-        <p class="footer-note">Built with precision and care.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- JavaScript for Header Scroll Effect -->
-  <script>
-    // Header scroll effect
-    const header = document.getElementById('header');
-    let lastScrollY = 0;
-
-    function handleScroll() {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-
-      lastScrollY = currentScrollY;
-    }
-
-    // Throttle scroll events for performance
-    let ticking = false;
-    window.addEventListener('scroll', function() {
-      if (!ticking) {
-        window.requestAnimationFrame(function() {
-          handleScroll();
-          ticking = false;
-        });
-        ticking = true;
-      }
-    });
-
-    // Smooth scroll for anchor links (fallback for older browsers)
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-        if (href !== '#') {
-          e.preventDefault();
-          const target = document.querySelector(href);
-          if (target) {
-            target.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }
-        }
-      });
-    });
-  </script>
+    </footer>
 </body>
 </html>
