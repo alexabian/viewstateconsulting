@@ -129,5 +129,4 @@ There is no automated testing framework. Verify changes manually by:
 
 ## Known Issues
 
-- Contact form has a placeholder Formspree endpoint (`f/YOUR_FORM_ID`) that may need a real form ID
 - Some duplicate CSS blocks exist in `index.html` (form styling appears multiple times)
