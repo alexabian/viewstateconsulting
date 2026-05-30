@@ -19,12 +19,63 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Alejandro Abian",
-      "jobTitle": "IT Contractor & Operations Lead",
-      "description": "IT contractor in Dubai. 15+ years delivering IT operations across APAC and EMEA. Trilingual: English, Spanish, Japanese.",
-      "knowsLanguage": ["English", "Spanish", "Japanese"],
-      "address": { "@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE" }
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://viewstate.co/#person",
+          "name": "Alejandro Abian",
+          "alternateName": "Alex Abian",
+          "jobTitle": "IT Contractor & Operations Lead",
+          "description": "IT contractor in Dubai. 15+ years delivering IT operations across APAC and EMEA. Trilingual: English, Spanish, Japanese.",
+          "knowsLanguage": ["English", "Spanish", "Japanese"],
+          "address": { "@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE" },
+          "email": "hello@viewstate.co",
+          "url": "https://viewstate.co",
+          "sameAs": "https://www.linkedin.com/in/alejandroabian/",
+          "knowsAbout": ["IT operations", "Hardware deployment", "Infrastructure scaling", "Cloud identity", "Active Directory", "VMware vSphere", "Microsoft 365", "Proxmox VE"],
+          "hasOccupation": {
+            "@type": "Occupation",
+            "name": "IT Contractor",
+            "occupationLocation": { "@type": "City", "name": "Dubai" },
+            "skills": "Hardware rollouts, Infrastructure projects, IT operations, Vendor management, Cross-regional team leadership"
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://viewstate.co/#service-hardware",
+          "name": "Hardware & Software Rollouts",
+          "provider": { "@id": "https://viewstate.co/#person" },
+          "description": "End-to-end enterprise hardware deployment, OS migrations, and software rollouts across multiple locations."
+        },
+        {
+          "@type": "Service",
+          "@id": "https://viewstate.co/#service-fractional",
+          "name": "Fractional IT Operations",
+          "provider": { "@id": "https://viewstate.co/#person" },
+          "description": "Senior IT operations on a contract basis. 2-3 days a week to run infrastructure, vendors, and team support."
+        },
+        {
+          "@type": "Service",
+          "@id": "https://viewstate.co/#service-scaling",
+          "name": "Infrastructure Scaling",
+          "provider": { "@id": "https://viewstate.co/#person" },
+          "description": "Standardizing chaotic IT setups with cloud identity, security baselines, and network architecture."
+        },
+        {
+          "@type": "Service",
+          "@id": "https://viewstate.co/#service-cleanup",
+          "name": "Post-Acquisition IT Cleanup",
+          "provider": { "@id": "https://viewstate.co/#person" },
+          "description": "Domain consolidation, user migration, and system standardization after company acquisitions."
+        },
+        {
+          "@type": "Service",
+          "@id": "https://viewstate.co/#service-global-team",
+          "name": "Global Team Operations",
+          "provider": { "@id": "https://viewstate.co/#person" },
+          "description": "Managing IT teams across APAC and EMEA time zones. Coordinated deployments from London to Shanghai."
+        }
+      ]
     }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
