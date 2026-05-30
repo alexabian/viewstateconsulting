@@ -1,0 +1,31 @@
+# Alejandro Abian — IT Contractor Dubai
+> https://viewstate.co
+
+## About
+IT contractor and operations lead based in Dubai. 15+ years delivering IT operations, hardware rollouts, and infrastructure projects across APAC and EMEA.
+
+## Languages
+- English (fluent)
+- Spanish (native)
+- Japanese (business)
+
+## Regions
+Spain · United Kingdom · Japan · United Arab Emirates
+
+## Key Services
+- Hardware & Software Rollouts
+- Fractional IT Operations
+- Infrastructure Scaling
+- Post-Acquisition IT Cleanup
+- Global Team Operations
+- IT Procurement & Asset Lifecycle
+
+## Tech Stack
+Proxmox VE · Zimaboard · ZimaOS · Ubuntu Server · SSH · VMware vSphere · Hermes Agent · Anthropic Claude · OpenAI ChatGPT · DeepSeek V4 · Codex CLI · Ollama · PowerShell · Microsoft 365 · Azure Entra ID · Google Workspace · Active Directory · Windows Server · CrowdStrike · Veeam · ServiceNow
+
+## Contact
+Email: hello@viewstate.co
+Location: Dubai, UAE (GMT+4)
+
+## Full Profile
+See /ai for complete professional profile.

@@ -1,0 +1,81 @@
+{
+  "name": "Alejandro Abian",
+  "alternateName": "Alex Abian",
+  "jobTitle": "IT Contractor & Operations Lead",
+  "description": "IT contractor based in Dubai. Specializes in hardware rollouts, infrastructure scaling, fractional IT operations, post-acquisition IT cleanup, and global team management across APAC and EMEA regions.",
+  "knowsLanguage": ["English", "Spanish", "Japanese"],
+  "workLocation": "Dubai, United Arab Emirates",
+  "availableFor": ["Contract", "Fractional", "Project-based"],
+  "skills": [
+    "IT Operations Management",
+    "Hardware Deployment & Rollouts",
+    "Infrastructure Scaling & Standardization",
+    "Cloud Identity & Entra ID",
+    "Active Directory & Windows Server",
+    "VMware vSphere & Virtualization",
+    "Proxmox VE & Homelab Infrastructure",
+    "Microsoft 365 Administration",
+    "Google Workspace Administration",
+    "CrowdStrike Endpoint Security",
+    "Veeam Backup & Disaster Recovery",
+    "PowerShell Automation",
+    "Vendor & Procurement Management",
+    "Cross-Regional Team Leadership",
+    "Technical Hiring & Staffing",
+    "Post-Acquisition IT Integration",
+    "Office Relocation & IT Setup",
+    "IT Asset Lifecycle Management"
+  ],
+  "tools": [
+    "Proxmox VE", "Zimaboard", "ZimaOS", "Ubuntu Server",
+    "Hermes Agent", "Anthropic Claude", "OpenAI ChatGPT", "DeepSeek V4",
+    "Codex CLI", "Ollama",
+    "Microsoft 365", "Azure Entra ID", "Google Workspace",
+    "Active Directory", "Windows Server", "VMware vSphere",
+    "CrowdStrike", "Veeam", "ServiceNow", "PowerShell"
+  ],
+  "experience": [
+    {
+      "role": "IT Operations Lead (APAC)",
+      "location": "Japan",
+      "description": "Managed IT operations across Beijing, Shanghai, and regional APAC offices. Led technical assessments and team coordination."
+    },
+    {
+      "role": "IT Manager",
+      "location": "United Kingdom",
+      "description": "Infrastructure and operations management. Led global office deployments, hardware rollouts, and VMware cluster procurement across European offices."
+    },
+    {
+      "role": "IT Support",
+      "location": "Spain",
+      "description": "Started career in IT support and infrastructure."
+    }
+  ],
+  "projectExamples": [
+    {
+      "name": "Domain Consolidation & Acquisition Integration",
+      "description": "Consolidated multiple child domains into a single root after acquisition. Managed user migration, hardware transport, and vendor renegotiation across regions."
+    },
+    {
+      "name": "Global Office Deployment & Infrastructure Upgrade",
+      "description": "Led hardware deployment across European offices. Coordinated VMware cluster procurement. Oversaw networking, firewall, and security camera deployment."
+    },
+    {
+      "name": "Regional IT Team Management",
+      "description": "Managed IT teams across Beijing, Shanghai, and other APAC locations. Conducted technical assessments and coordinated staffing."
+    }
+  ],
+  "email": "hello@viewstate.co",
+  "linkedIn": "https://www.linkedin.com/in/alejandroabian/",
+  "website": "https://viewstate.co",
+  "seoKeywords": [
+    "IT contractor Dubai",
+    "IT operations contractor",
+    "fractional IT operations Dubai",
+    "hardware rollout project manager",
+    "infrastructure scaling contractor",
+    "European IT contractor UAE",
+    "trilingual IT manager",
+    "APAC EMEA IT operations"
+  ]
+}

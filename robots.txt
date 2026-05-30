@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Allow: /ai/
+Allow: /llms.txt
+Sitemap: https://viewstate.co/sitemap.xml
