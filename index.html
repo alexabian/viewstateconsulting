@@ -19,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%222%22 fill=%22%23000%22/><text x=%2216%22 y=%2222%22 font-family=%22monospace%22 font-size=%2220%22 font-weight=%22700%22 fill=%22%23DA5C2C%22 text-anchor=%22middle%22>A</text></svg>">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
@@ -170,6 +171,12 @@
             background: var(--color-charcoal-surface);
             border-radius: var(--radius-sm);
             padding: var(--spacing-32);
+        }
+        .service-icon {
+            width: 28px;
+            height: 28px;
+            display: block;
+            margin-bottom: var(--spacing-16);
         }
         .service-num {
             font-size: 11px; font-weight: 500;
@@ -359,37 +366,37 @@
                 <h2 class="section-title">Contract IT Operations — Hands-On, No Overhead</h2>
                 <div class="services-grid">
                     <div class="service-card">
-                        <div class="service-num">01</div>
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#DA5C2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="1"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><rect x="4" y="7" width="6" height="4" rx="0.5"/><rect x="14" y="7" width="6" height="8" rx="0.5"/></svg>
                         <h3 class="service-title">Hardware &amp; Software Rollouts</h3>
                         <p class="service-desc">End-to-end deployment of enterprise hardware, OS migrations, and software across multiple locations.</p>
                         <div class="service-tags"><span class="service-tag">Fleet Provisioning</span><span class="service-tag">Logistics</span><span class="service-tag">Vendor Mgmt</span></div>
                     </div>
                     <div class="service-card">
-                        <div class="service-num">02</div>
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#DA5C2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
                         <h3 class="service-title">Fractional IT Operations</h3>
                         <p class="service-desc">Senior IT on a contract basis. 2–3 days a week to run your infrastructure, vendors, and team support.</p>
                         <div class="service-tags"><span class="service-tag">Infra Health</span><span class="service-tag">Vendors</span><span class="service-tag">Incident Response</span></div>
                     </div>
                     <div class="service-card">
-                        <div class="service-num">03</div>
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#DA5C2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
                         <h3 class="service-title">Infrastructure Scaling</h3>
                         <p class="service-desc">From chaotic setups to standardized IT — cloud identity, security baselines, and network architecture.</p>
                         <div class="service-tags"><span class="service-tag">Cloud Identity</span><span class="service-tag">Security</span><span class="service-tag">Network Design</span></div>
                     </div>
                     <div class="service-card">
-                        <div class="service-num">04</div>
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#DA5C2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-8 4 4 6-9"/><path d="M15 7h6v6"/></svg>
                         <h3 class="service-title">Post-Acquisition Cleanup</h3>
                         <p class="service-desc">Two of everything? I consolidate domains, migrate users, and standardize into one operation.</p>
                         <div class="service-tags"><span class="service-tag">Consolidation</span><span class="service-tag">Migration</span><span class="service-tag">Cross-Region</span></div>
                     </div>
                     <div class="service-card">
-                        <div class="service-num">05</div>
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#DA5C2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
                         <h3 class="service-title">Global Team Operations</h3>
                         <p class="service-desc">Managing IT teams across APAC and EMEA. Coordinated deployments from London to Shanghai.</p>
                         <div class="service-tags"><span class="service-tag">Team Coordination</span><span class="service-tag">Multi-Region</span><span class="service-tag">Cultural Bridging</span></div>
                     </div>
                     <div class="service-card">
-                        <div class="service-num">06</div>
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#DA5C2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
                         <h3 class="service-title">IT Procurement &amp; Asset Lifecycle</h3>
                         <p class="service-desc">Hardware sourcing, vendor negotiations, inventory tracking, and lifecycle management.</p>
                         <div class="service-tags"><span class="service-tag">Vendor Relations</span><span class="service-tag">Asset Tracking</span><span class="service-tag">Budget Opt.</span></div>
