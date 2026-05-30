@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alejandro Abian — IT Contractor, Dubai</title>
-    <meta name="description" content="IT contractor in Dubai. 15+ years delivering IT operations, hardware rollouts, and infrastructure projects across APAC and EMEA. English, Spanish, Japanese.">
-
+    <meta name="description" content="IT contractor in Dubai. 15+ years delivering IT operations across APAC and EMEA. English, Spanish, Japanese.">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -17,586 +16,290 @@
       "address": { "@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE" }
     }
     </script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         :root {
-            /* Colors */
-            --color-canvas-white: #f2f2f2;
-            --color-deep-graphite: #070707;
-            --color-off-white: #ffffff;
-            --color-soft-gray-highlight: #a2a2a9;
-            --color-medium-gray-highlight: #797979;
-
-            /* Typography */
-            --font-aftenscreen: 'Montserrat', ui-sans-serif, system-ui, -apple-system, sans-serif;
-            --font-bentonsans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
-
-            /* Scale */
-            --text-caption: 12px;
-            --leading-caption: 1.2;
+            --color-ink: #292524;
+            --color-paper: #fafaf9;
+            --color-whisper: #e7e5e4;
+            --color-snow: #ffffff;
+            --color-graphite: #79716b;
+            --color-violet-action: #615fff;
+            --color-violet-accent: #4f39f6;
+            --color-sunset-orange: #d97757;
+            --font-geist: 'Inter', ui-sans-serif, system-ui, sans-serif;
+            --font-cooper: 'Playfair Display', Georgia, serif;
+            --text-display: 80px;
+            --leading-display: 1.1;
+            --text-heading: 40px;
+            --leading-heading: 1.2;
             --text-body: 16px;
-            --leading-body: 1.4;
-            --text-heading-sm: 27px;
-            --leading-heading-sm: 1.3;
-            --text-heading: clamp(48px, 6vw, 75px);
-            --leading-heading: 1;
-            --tracking-heading: -0.04px;
-            --text-heading-lg: clamp(60px, 8vw, 100px);
-            --leading-heading-lg: 1;
-            --tracking-heading-lg: -0.04px;
-            --text-display: clamp(72px, 12vw, 180px);
-            --leading-display: 0.8;
-            --tracking-display: -0.05em;
-
-            --font-weight-regular: 400;
-
-            --spacing-4: 4px;
-            --spacing-20: 20px;
-            --spacing-100: 100px;
-            --spacing-108: 108px;
-            --spacing-160: 160px;
-
-            --card-padding: 21px;
-            --radius-md: 4.16667px;
-            --max-width: 1200px;
-            --transition: all 0.2s ease;
+            --leading-body: 1.5;
+            --text-caption: 12px;
+            --spacing-120: 120px;
+            --spacing-80: 80px;
+            --spacing-64: 64px;
+            --spacing-40: 40px;
+            --spacing-32: 32px;
+            --spacing-24: 24px;
+            --spacing-16: 16px;
+            --spacing-8: 8px;
+            --radius-cards: 16px;
+            --radius-buttons: 8px;
+            --radius-tags: 12px;
+            --shadow-card: rgba(0,0,0,0.08) 0px 20px 25px -5px, rgba(0,0,0,0.06) 0px 8px 10px -6px;
+            --max-width: 1100px;
         }
-
         html { scroll-behavior: smooth; }
-
         body {
-            font-family: var(--font-bentonsans);
-            background: var(--color-canvas-white);
-            color: var(--color-deep-graphite);
-            line-height: var(--leading-body);
+            font-family: var(--font-geist);
+            background: var(--color-paper);
+            color: var(--color-ink);
             font-size: var(--text-body);
-            font-weight: var(--font-weight-regular);
+            line-height: var(--leading-body);
             -webkit-font-smoothing: antialiased;
         }
-
         a { color: inherit; text-decoration: none; }
 
         /* Navigation */
         nav {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: var(--color-off-white);
-            padding: var(--spacing-20) 40px;
-            border-bottom: 1px solid rgba(7,7,7,0.06);
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(250,250,249,0.95);
+            backdrop-filter: blur(8px);
+            padding: var(--spacing-16) 40px;
+            border-bottom: 1px solid var(--color-whisper);
         }
-
         .nav-inner {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            max-width: var(--max-width); margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
         }
-
-        .nav-name {
-            font-family: var(--font-aftenscreen);
-            font-size: var(--text-body);
-            font-weight: var(--font-weight-regular);
-            letter-spacing: normal;
-            color: var(--color-deep-graphite);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 24px;
-            align-items: center;
-        }
-
-        .nav-link {
-            font-size: var(--text-body);
-            font-weight: var(--font-weight-regular);
-            color: var(--color-deep-graphite);
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: var(--color-deep-graphite);
-            transition: var(--transition);
-        }
-
-        .nav-link:hover::after { width: 100%; }
-
-        .nav-lang {
-            font-size: 12px;
-            color: var(--color-soft-gray-highlight);
-            letter-spacing: 0.05em;
-            font-weight: 500;
-        }
+        .nav-name { font-weight: 600; font-size: 16px; }
+        .nav-links { display: flex; gap: var(--spacing-32); align-items: center; }
+        .nav-link { font-size: 14px; color: var(--color-graphite); transition: color 0.2s; }
+        .nav-link:hover { color: var(--color-ink); }
+        .nav-lang { font-size: 12px; color: var(--color-stone); letter-spacing: 0.04em; }
 
         /* Hero */
         .hero {
-            background: var(--color-deep-graphite);
-            color: var(--color-off-white);
-            padding: var(--spacing-160) 40px var(--spacing-108);
+            padding: var(--spacing-120) 40px;
             text-align: center;
         }
-
-        .hero-inner {
-            max-width: var(--max-width);
-            margin: 0 auto;
-        }
-
+        .hero-inner { max-width: 800px; margin: 0 auto; }
         .hero-label {
-            font-family: var(--font-bentonsans);
             font-size: var(--text-caption);
             font-weight: 500;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
-            color: var(--color-soft-gray-highlight);
-            margin-bottom: 28px;
+            color: var(--color-graphite);
+            margin-bottom: var(--spacing-24);
         }
-
         .hero-title {
-            font-family: var(--font-aftenscreen);
-            font-size: var(--text-display);
+            font-family: var(--font-cooper);
+            font-size: clamp(40px, 7vw, var(--text-display));
             line-height: var(--leading-display);
-            letter-spacing: var(--tracking-display);
             font-weight: 400;
-            max-width: 1100px;
-            margin: 0 auto 32px;
-            color: var(--color-off-white);
+            margin-bottom: var(--spacing-24);
+            color: var(--color-ink);
         }
-
-        .hero-title .amp {
-            color: var(--color-soft-gray-highlight);
-            font-size: clamp(40px, 6vw, 75px);
-            line-height: 0.8;
-            letter-spacing: -0.04em;
-            display: inline-block;
-            vertical-align: middle;
-        }
-
         .hero-sub {
-            font-size: var(--text-body);
-            line-height: var(--leading-body);
-            color: var(--color-soft-gray-highlight);
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--color-graphite);
             max-width: 600px;
-            margin: 0 auto 40px;
-            font-weight: 400;
+            margin: 0 auto var(--spacing-32);
         }
-
         .hero-langs {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 48px;
+            display: flex; justify-content: center; gap: var(--spacing-16);
+            font-size: 14px; color: var(--color-graphite); margin-bottom: var(--spacing-40);
         }
-
-        .hero-lang {
-            font-family: var(--font-bentonsans);
-            font-size: var(--text-caption);
-            font-weight: 500;
-            color: var(--color-soft-gray-highlight);
-            letter-spacing: 0.05em;
-        }
-
-        .hero-cta {
+        .btn-primary {
             display: inline-block;
-            font-size: var(--text-body);
-            font-weight: var(--font-weight-regular);
-            color: var(--color-off-white);
-            border-bottom: 1px solid rgba(255,255,255,0.3);
-            padding-bottom: 2px;
-            transition: var(--transition);
+            background: var(--color-violet-action);
+            color: var(--color-snow);
+            font-size: 16px; font-weight: 600;
+            padding: var(--spacing-8) var(--spacing-32);
+            border-radius: var(--radius-buttons);
+            transition: opacity 0.2s;
         }
-
-        .hero-cta:hover {
-            border-color: var(--color-off-white);
-        }
-
+        .btn-primary:hover { opacity: 0.9; }
         .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 80px;
-            margin-top: 80px;
-            padding-top: 40px;
-            border-top: 1px solid rgba(255,255,255,0.08);
+            display: flex; justify-content: center; gap: var(--spacing-64);
+            margin-top: var(--spacing-64);
+            padding-top: var(--spacing-32);
+            border-top: 1px solid var(--color-whisper);
         }
+        .stat-num { font-size: 40px; font-weight: 700; line-height: 1.2; }
+        .stat-label { font-size: 14px; color: var(--color-graphite); margin-top: 4px; }
 
-        .stat-num {
-            font-family: var(--font-aftenscreen);
-            font-size: var(--text-heading-lg);
-            line-height: var(--leading-heading-lg);
-            letter-spacing: var(--tracking-heading-lg);
-            font-weight: 400;
-            color: var(--color-off-white);
+        /* Sections */
+        section { padding: var(--spacing-80) 40px; }
+        .section-inner { max-width: var(--max-width); margin: 0 auto; }
+        .section-label {
+            font-size: 14px; font-weight: 500; color: var(--color-violet-action);
+            letter-spacing: 0.08em; text-transform: uppercase;
+            margin-bottom: var(--spacing-8);
         }
-
-        .stat-label {
-            font-size: var(--text-caption);
-            color: var(--color-soft-gray-highlight);
-            letter-spacing: 0.03em;
-            margin-top: 4px;
-        }
-
-        /* Sections shared */
-        section {
-            padding: var(--spacing-108) 40px;
-        }
-
-        .section-inner {
-            max-width: var(--max-width);
-            margin: 0 auto;
-        }
-
-        .section-heading {
-            font-family: var(--font-aftenscreen);
-            font-size: var(--text-display);
-            line-height: var(--leading-display);
-            letter-spacing: var(--tracking-display);
-            font-weight: 400;
-            color: var(--color-deep-graphite);
-            margin-bottom: var(--spacing-100);
-            max-width: 800px;
-        }
-
-        /* What I Deliver — alternating text/image layout */
-        .deliver-item {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: start;
-            padding: 60px 0;
-            border-bottom: 1px solid rgba(7,7,7,0.05);
-        }
-
-        .deliver-item:last-child { border-bottom: none; }
-
-        .deliver-num {
-            font-family: var(--font-aftenscreen);
-            font-size: var(--text-body);
-            font-weight: var(--font-weight-regular);
-            color: var(--color-medium-gray-highlight);
-            margin-bottom: 12px;
-        }
-
-        .deliver-title {
-            font-family: var(--font-aftenscreen);
+        .section-title {
             font-size: var(--text-heading);
             line-height: var(--leading-heading);
-            letter-spacing: var(--tracking-heading);
-            font-weight: 400;
-            margin-bottom: 20px;
-            max-width: 500px;
+            font-weight: 700;
+            margin-bottom: var(--spacing-40);
+            max-width: 600px;
         }
 
-        .deliver-desc {
-            font-size: var(--text-body);
-            line-height: var(--leading-body);
-            color: var(--color-medium-gray-highlight);
-            max-width: 440px;
+        /* Services grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--spacing-24);
         }
-
-        .deliver-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 20px;
+        .service-card {
+            background: var(--color-snow);
+            border-radius: var(--radius-cards);
+            padding: var(--spacing-32);
+            box-shadow: var(--shadow-card);
         }
-
-        .deliver-tag {
+        .service-num {
             font-size: var(--text-caption);
-            font-weight: 500;
-            color: var(--color-soft-gray-highlight);
-            letter-spacing: 0.03em;
-            padding: 4px 0;
-            border-bottom: 1px solid rgba(7,7,7,0.08);
+            font-weight: 600;
+            color: var(--color-violet-action);
+            letter-spacing: 0.08em;
+            margin-bottom: var(--spacing-8);
+        }
+        .service-title {
+            font-size: 20px; font-weight: 600;
+            margin-bottom: var(--spacing-16);
+        }
+        .service-desc {
+            font-size: 15px; line-height: 1.6;
+            color: var(--color-graphite);
+            margin-bottom: var(--spacing-16);
+        }
+        .service-tags {
+            display: flex; flex-wrap: wrap; gap: 6px;
+        }
+        .service-tag {
+            font-size: 12px; font-weight: 500;
+            padding: 4px 12px;
+            background: var(--color-paper);
+            border-radius: var(--radius-tags);
+            color: var(--color-ink);
         }
 
         /* Projects */
         .project-card {
-            padding: 40px 0;
-            border-bottom: 1px solid rgba(7,7,7,0.05);
+            padding: var(--spacing-32) 0;
+            border-bottom: 1px solid var(--color-whisper);
         }
-
         .project-card:last-child { border-bottom: none; }
-
-        .project-title {
-            font-family: var(--font-aftenscreen);
-            font-size: var(--text-heading-sm);
-            line-height: var(--leading-heading-sm);
-            font-weight: 400;
-            margin-bottom: 16px;
-        }
-
-        .project-desc {
-            font-size: var(--text-body);
-            line-height: var(--leading-body);
-            color: var(--color-medium-gray-highlight);
-            max-width: 640px;
-        }
-
-        .project-tags {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 16px;
-        }
-
-        .project-tag {
-            font-size: var(--text-caption);
-            font-weight: 500;
-            color: var(--color-soft-gray-highlight);
-            letter-spacing: 0.03em;
-        }
+        .project-title { font-size: 20px; font-weight: 600; margin-bottom: var(--spacing-8); }
+        .project-desc { font-size: 15px; color: var(--color-graphite); line-height: 1.7; max-width: 680px; }
+        .project-tags { display: flex; gap: var(--spacing-16); margin-top: var(--spacing-16); }
+        .project-tag { font-size: 12px; font-weight: 500; color: var(--color-graphite); }
 
         /* Tech Stack */
-        .techstack-grid {
+        .stack-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 60px;
+            gap: var(--spacing-40);
         }
-
-        .techstack-cat {
-            font-family: var(--font-aftenscreen);
-            font-size: var(--text-heading-sm);
-            line-height: var(--leading-heading-sm);
-            font-weight: 400;
-            margin-bottom: 24px;
-        }
-
-        .techstack-items {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            list-style: none;
-        }
-
-        .techstack-item {
-            font-size: var(--text-caption);
-            font-weight: 500;
-            color: var(--color-medium-gray-highlight);
-            letter-spacing: 0.02em;
-            padding: 6px 14px;
-            border: 1px solid rgba(7,7,7,0.08);
-            border-radius: var(--radius-md);
+        .stack-cat { font-size: 18px; font-weight: 600; margin-bottom: var(--spacing-16); }
+        .stack-items { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; }
+        .stack-item {
+            font-size: 13px; font-weight: 500;
+            padding: 6px 16px;
+            background: var(--color-snow);
+            border-radius: var(--radius-tags);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
         }
 
         /* Journey */
-        .journey { text-align: center; }
-
-        .journey .section-heading {
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-        }
-
         .journey-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-            max-width: 800px;
-            margin: 0 auto 60px;
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--spacing-24);
+            max-width: 800px; margin: 0 auto var(--spacing-40);
         }
-
-        @media (max-width: 640px) {
-            .journey-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-
+        @media (max-width: 640px) { .journey-grid { grid-template-columns: repeat(2, 1fr); } }
         .journey-card {
-            padding: 28px 20px;
-            background: var(--color-off-white);
-            border-radius: var(--radius-md);
+            background: var(--color-snow);
+            border-radius: var(--radius-cards);
+            padding: var(--spacing-24);
             text-align: center;
+            box-shadow: var(--shadow-card);
         }
-
-        .journey-flag {
-            font-size: 32px;
-            display: block;
-            margin-bottom: 12px;
-        }
-
-        .journey-place {
-            font-family: var(--font-aftenscreen);
-            font-size: var(--text-heading-sm);
-            line-height: var(--leading-heading-sm);
-            font-weight: 400;
-            margin-bottom: 4px;
-        }
-
-        .journey-context {
-            font-size: var(--text-caption);
-            color: var(--color-soft-gray-highlight);
-            line-height: 1.4;
-        }
-
+        .journey-flag { font-size: 32px; display: block; margin-bottom: var(--spacing-8); }
+        .journey-place { font-size: 18px; font-weight: 600; }
+        .journey-context { font-size: 13px; color: var(--color-graphite); margin-top: 4px; }
         .journey-footer {
-            max-width: 600px;
-            margin: 0 auto;
-            font-size: var(--text-body);
-            line-height: var(--leading-body);
-            color: var(--color-medium-gray-highlight);
-        }
-
-        .journey-footer strong {
-            color: var(--color-deep-graphite);
-            font-weight: 500;
+            max-width: 620px; margin: 0 auto;
+            font-size: 16px; color: var(--color-graphite); line-height: 1.7; text-align: center;
         }
 
         /* Contact */
-        .contact {
-            background: var(--color-deep-graphite);
-            color: var(--color-off-white);
-            text-align: center;
-        }
-
-        .contact-heading {
-            font-family: var(--font-aftenscreen);
-            font-size: var(--text-heading-lg);
-            line-height: var(--leading-heading-lg);
-            letter-spacing: var(--tracking-heading-lg);
-            font-weight: 400;
-            margin-bottom: 32px;
-        }
-
+        .contact { text-align: center; }
+        .contact-heading { font-size: 40px; font-weight: 700; margin-bottom: var(--spacing-24); }
         .contact-email {
             display: inline-block;
-            font-family: var(--font-bentonsans);
-            font-size: clamp(20px, 2.5vw, 28px);
-            font-weight: 400;
-            color: var(--color-off-white);
+            font-size: 24px; font-weight: 600;
+            color: var(--color-violet-action);
             padding-bottom: 4px;
-            border-bottom: 1px solid rgba(255,255,255,0.2);
-            transition: var(--transition);
+            border-bottom: 2px solid var(--color-violet-action);
+            transition: opacity 0.2s;
         }
-
-        .contact-email:hover { border-color: var(--color-off-white); }
-
-        .contact-meta {
-            font-size: var(--text-caption);
-            color: var(--color-soft-gray-highlight);
-            margin-top: 20px;
-            line-height: 1.6;
-        }
+        .contact-email:hover { opacity: 0.7; }
+        .contact-meta { font-size: 14px; color: var(--color-graphite); margin-top: var(--spacing-16); line-height: 1.6; }
 
         .contact-form {
-            max-width: 500px;
-            margin: 48px auto 0;
-            text-align: left;
+            max-width: 520px; margin: var(--spacing-40) auto 0; text-align: left;
         }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
+        .form-group { margin-bottom: var(--spacing-16); }
         .form-label {
-            font-size: var(--text-caption);
-            font-weight: 500;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            color: var(--color-soft-gray-highlight);
-            display: block;
-            margin-bottom: 6px;
+            font-size: 12px; font-weight: 500; letter-spacing: 0.05em;
+            text-transform: uppercase; color: var(--color-graphite);
+            display: block; margin-bottom: 6px;
         }
-
-        .form-input,
-        .form-textarea {
-            width: 100%;
-            padding: 14px 16px;
-            font-family: var(--font-bentonsans);
-            font-size: var(--text-body);
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.08);
-            color: var(--color-off-white);
-            transition: var(--transition);
-            border-radius: var(--radius-md);
+        .form-input, .form-textarea {
+            width: 100%; padding: 10px 14px;
+            font-family: var(--font-geist); font-size: 15px;
+            background: var(--color-snow);
+            border: 1px solid var(--color-whisper);
+            border-radius: var(--radius-buttons);
+            color: var(--color-ink);
+            transition: border-color 0.2s;
         }
-
-        .form-input:focus,
-        .form-textarea:focus {
-            outline: none;
-            border-color: rgba(255,255,255,0.2);
+        .form-input:focus, .form-textarea:focus {
+            outline: none; border-color: var(--color-violet-action);
         }
-
-        .form-textarea {
-            min-height: 110px;
-            resize: vertical;
-        }
-
+        .form-textarea { min-height: 100px; resize: vertical; }
         .form-submit {
-            font-family: var(--font-bentonsans);
-            font-size: var(--text-body);
-            font-weight: var(--font-weight-regular);
-            color: var(--color-deep-graphite);
-            background: var(--color-off-white);
-            border: none;
-            padding: 14px 40px;
-            cursor: pointer;
-            transition: var(--transition);
-            border-radius: var(--radius-md);
-            width: 100%;
+            width: 100%; padding: 12px 32px;
+            font-family: var(--font-geist); font-size: 16px; font-weight: 600;
+            background: var(--color-violet-action); color: var(--color-snow);
+            border: none; border-radius: var(--radius-buttons);
+            cursor: pointer; transition: opacity 0.2s;
         }
-
-        .form-submit:hover {
-            background: var(--color-canvas-white);
-        }
+        .form-submit:hover { opacity: 0.9; }
 
         /* Footer */
         footer {
-            padding: 28px 40px;
-            border-top: 1px solid rgba(7,7,7,0.05);
-            background: var(--color-off-white);
+            padding: var(--spacing-24) 40px;
+            border-top: 1px solid var(--color-whisper);
         }
-
         .footer-inner {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: var(--text-caption);
-            color: var(--color-soft-gray-highlight);
+            max-width: var(--max-width); margin: 0 auto;
+            display: flex; justify-content: space-between;
+            font-size: 13px; color: var(--color-graphite);
         }
+        .footer-inner a { color: var(--color-ink); }
+        .footer-inner a:hover { opacity: 0.6; }
 
-        .footer-inner a {
-            color: var(--color-deep-graphite);
-            transition: var(--transition);
-        }
-
-        .footer-inner a:hover {
-            opacity: 0.5;
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
-            .deliver-item {
-                grid-template-columns: 1fr;
-                gap: 24px;
-            }
-
-            .techstack-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .hero-stats {
-                gap: 40px;
-                flex-wrap: wrap;
-            }
-
-            nav { padding: 16px 20px; }
-            section { padding: 60px 20px; }
-            .hero { padding: 100px 20px 60px; }
-            footer { padding: 20px; }
+            .stack-grid { grid-template-columns: 1fr; }
+            .hero-stats { gap: var(--spacing-32); flex-wrap: wrap; }
+            nav { padding: var(--spacing-16) 20px; }
+            section { padding: var(--spacing-40) 20px; }
         }
     </style>
 </head>
@@ -617,201 +320,130 @@
         <section class="hero">
             <div class="hero-inner">
                 <div class="hero-label">IT Contractor — Dubai</div>
-                <h1 class="hero-title">
-                    IT Operations <span class="amp">&amp;</span> Infrastructure<br>Across APAC &amp; EMEA
-                </h1>
-                <p class="hero-sub">
-                    15+ years leading hardware rollouts, infrastructure projects, and IT operations for companies that need experienced execution without the overhead.
-                </p>
-                <div class="hero-langs">
-                    <span class="hero-lang">Spanish</span>
-                    <span class="hero-lang">·</span>
-                    <span class="hero-lang">English</span>
-                    <span class="hero-lang">·</span>
-                    <span class="hero-lang">Japanese</span>
-                </div>
-                <a href="#contact" class="hero-cta">Get in touch →</a>
+                <h1 class="hero-title">IT Operations &amp; Infrastructure<br>Across APAC &amp; EMEA</h1>
+                <p class="hero-sub">15+ years leading hardware rollouts, infrastructure projects, and IT operations for companies that need experienced execution without the overhead.</p>
+                <div class="hero-langs">Spanish · English · Japanese</div>
+                <a href="#contact" class="btn-primary">Get in touch →</a>
 
                 <div class="hero-stats">
-                    <div>
-                        <div class="stat-num">15+</div>
-                        <div class="stat-label">Years in IT operations</div>
-                    </div>
-                    <div>
-                        <div class="stat-num">4</div>
-                        <div class="stat-label">Countries delivered</div>
-                    </div>
-                    <div>
-                        <div class="stat-num">3</div>
-                        <div class="stat-label">Languages</div>
-                    </div>
+                    <div><div class="stat-num">15+</div><div class="stat-label">Years in IT</div></div>
+                    <div><div class="stat-num">4</div><div class="stat-label">Countries</div></div>
+                    <div><div class="stat-num">3</div><div class="stat-label">Languages</div></div>
                 </div>
             </div>
         </section>
 
         <section id="work">
             <div class="section-inner">
-                <h2 class="section-heading">What I Deliver</h2>
-
-                <div class="deliver-item">
-                    <div>
-                        <div class="deliver-num">01</div>
-                        <h3 class="deliver-title">Hardware &amp; Software Rollouts</h3>
-                        <p class="deliver-desc">End-to-end management of enterprise hardware deployments, OS migrations, and software rollouts across multiple locations.</p>
-                        <div class="deliver-tags">
-                            <span class="deliver-tag">Fleet Provisioning</span>
-                            <span class="deliver-tag">Cross-Region Logistics</span>
-                            <span class="deliver-tag">Vendor Management</span>
-                        </div>
+                <div class="section-label">What I Deliver</div>
+                <h2 class="section-title">Contract IT Operations — Hands-On, No Overhead</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-num">01</div>
+                        <h3 class="service-title">Hardware &amp; Software Rollouts</h3>
+                        <p class="service-desc">End-to-end deployment of enterprise hardware, OS migrations, and software across multiple locations.</p>
+                        <div class="service-tags"><span class="service-tag">Fleet Provisioning</span><span class="service-tag">Logistics</span><span class="service-tag">Vendor Mgmt</span></div>
                     </div>
-                    <div></div>
-                </div>
-
-                <div class="deliver-item">
-                    <div>
-                        <div class="deliver-num">02</div>
-                        <h3 class="deliver-title">Fractional IT Operations</h3>
-                        <p class="deliver-desc">Senior IT operations on a contract basis. 2–3 days a week to run your infrastructure, manage vendors, and support your team.</p>
-                        <div class="deliver-tags">
-                            <span class="deliver-tag">Infrastructure Health</span>
-                            <span class="deliver-tag">Vendor Management</span>
-                            <span class="deliver-tag">Incident Response</span>
-                        </div>
+                    <div class="service-card">
+                        <div class="service-num">02</div>
+                        <h3 class="service-title">Fractional IT Operations</h3>
+                        <p class="service-desc">Senior IT on a contract basis. 2–3 days a week to run your infrastructure, vendors, and team support.</p>
+                        <div class="service-tags"><span class="service-tag">Infra Health</span><span class="service-tag">Vendors</span><span class="service-tag">Incident Response</span></div>
                     </div>
-                    <div></div>
-                </div>
-
-                <div class="deliver-item">
-                    <div>
-                        <div class="deliver-num">03</div>
-                        <h3 class="deliver-title">Infrastructure Scaling</h3>
-                        <p class="deliver-desc">Taking companies from chaotic setups to standardized, scalable IT — cloud identity, security baselines, and network architecture.</p>
-                        <div class="deliver-tags">
-                            <span class="deliver-tag">Cloud Identity</span>
-                            <span class="deliver-tag">Network Design</span>
-                            <span class="deliver-tag">Security Baselines</span>
-                        </div>
+                    <div class="service-card">
+                        <div class="service-num">03</div>
+                        <h3 class="service-title">Infrastructure Scaling</h3>
+                        <p class="service-desc">From chaotic setups to standardized IT — cloud identity, security baselines, and network architecture.</p>
+                        <div class="service-tags"><span class="service-tag">Cloud Identity</span><span class="service-tag">Security</span><span class="service-tag">Network Design</span></div>
                     </div>
-                    <div></div>
-                </div>
-
-                <div class="deliver-item">
-                    <div>
-                        <div class="deliver-num">04</div>
-                        <h3 class="deliver-title">Post-Acquisition IT Cleanup</h3>
-                        <p class="deliver-desc">Acquired a company and now have two of everything? I consolidate domains, migrate users, and standardize systems into one operation.</p>
-                        <div class="deliver-tags">
-                            <span class="deliver-tag">Domain Consolidation</span>
-                            <span class="deliver-tag">User Migration</span>
-                            <span class="deliver-tag">Cross-Region Transport</span>
-                        </div>
+                    <div class="service-card">
+                        <div class="service-num">04</div>
+                        <h3 class="service-title">Post-Acquisition Cleanup</h3>
+                        <p class="service-desc">Two of everything? I consolidate domains, migrate users, and standardize into one operation.</p>
+                        <div class="service-tags"><span class="service-tag">Consolidation</span><span class="service-tag">Migration</span><span class="service-tag">Cross-Region</span></div>
                     </div>
-                    <div></div>
-                </div>
-
-                <div class="deliver-item">
-                    <div>
-                        <div class="deliver-num">05</div>
-                        <h3 class="deliver-title">Global Team Operations</h3>
-                        <p class="deliver-desc">Managing IT teams across APAC and EMEA time zones. Coordinated deployments and support operations from London to Shanghai.</p>
-                        <div class="deliver-tags">
-                            <span class="deliver-tag">Team Coordination</span>
-                            <span class="deliver-tag">Multi-Region Ops</span>
-                            <span class="deliver-tag">Cultural Bridging</span>
-                        </div>
+                    <div class="service-card">
+                        <div class="service-num">05</div>
+                        <h3 class="service-title">Global Team Operations</h3>
+                        <p class="service-desc">Managing IT teams across APAC and EMEA. Coordinated deployments from London to Shanghai.</p>
+                        <div class="service-tags"><span class="service-tag">Team Coordination</span><span class="service-tag">Multi-Region</span><span class="service-tag">Cultural Bridging</span></div>
                     </div>
-                    <div></div>
                 </div>
             </div>
         </section>
 
-        <section style="background: var(--color-off-white);">
+        <section style="background: var(--color-snow);">
             <div class="section-inner">
-                <h2 class="section-heading">Real Projects</h2>
+                <div class="section-label">Real Projects</div>
+                <h2 class="section-title">Work I've Actually Delivered</h2>
 
                 <div class="project-card">
                     <h3 class="project-title">Domain Consolidation &amp; Acquisition Integration</h3>
-                    <p class="project-desc">Consolidated multiple child domains into a single root after an acquisition. Managed user migration, hardware transport across regions, and vendor renegotiation. Reported cost savings and operational improvements to management.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">M&amp;A Integration</span>
-                        <span class="project-tag">Identity</span>
-                        <span class="project-tag">Multi-Region</span>
-                    </div>
+                    <p class="project-desc">Consolidated multiple child domains into a single root after an acquisition. Managed user migration, hardware transport, and vendor renegotiation across regions.</p>
+                    <div class="project-tags"><span class="project-tag">M&amp;A Integration</span><span class="project-tag">Identity</span><span class="project-tag">Multi-Region</span></div>
                 </div>
-
                 <div class="project-card">
                     <h3 class="project-title">Global Office Deployment &amp; Infrastructure Upgrade</h3>
-                    <p class="project-desc">Led hardware deployment across European offices. Coordinated VMware cluster procurement at Dell facilities. Oversaw networking, firewall, and security camera deployment with building management. Relocated multi-floor offices into new locations.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">VMware</span>
-                        <span class="project-tag">Networking</span>
-                        <span class="project-tag">Office Relocation</span>
-                    </div>
+                    <p class="project-desc">Led hardware deployment across European offices. VMware cluster procurement at Dell. Networking, firewall, security camera deployment. Multi-floor relocations.</p>
+                    <div class="project-tags"><span class="project-tag">VMware</span><span class="project-tag">Networking</span><span class="project-tag">Office Relocation</span></div>
                 </div>
-
                 <div class="project-card">
                     <h3 class="project-title">Regional IT Team Management</h3>
-                    <p class="project-desc">Managed IT teams across Beijing, Shanghai, and other APAC locations. Conducted technical assessments and coordinated staffing across regional offices. Built workflows and processes that are still in use today.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Team Management</span>
-                        <span class="project-tag">APAC</span>
-                        <span class="project-tag">Process Design</span>
-                    </div>
+                    <p class="project-desc">Managed IT teams across Beijing, Shanghai, and other APAC locations. Technical assessments, staffing coordination, and workflows still in use today.</p>
+                    <div class="project-tags"><span class="project-tag">Team Mgmt</span><span class="project-tag">APAC</span><span class="project-tag">Process Design</span></div>
                 </div>
             </div>
         </section>
 
         <section id="stack">
             <div class="section-inner">
-                <h2 class="section-heading">My Stack</h2>
-
-                <div class="techstack-grid">
+                <div class="section-label">My Stack</div>
+                <h2 class="section-title">Tools I Work With Every Day</h2>
+                <div class="stack-grid">
                     <div>
-                        <h3 class="techstack-cat">Homelab &amp; Infrastructure</h3>
-                        <ul class="techstack-items">
-                            <li class="techstack-item">Proxmox VE</li>
-                            <li class="techstack-item">Zimaboard</li>
-                            <li class="techstack-item">ZimaOS</li>
-                            <li class="techstack-item">Ubuntu Server</li>
-                            <li class="techstack-item">SSH</li>
-                            <li class="techstack-item">VMware vSphere</li>
+                        <div class="stack-cat">Homelab &amp; Infrastructure</div>
+                        <ul class="stack-items">
+                            <li class="stack-item">Proxmox VE</li>
+                            <li class="stack-item">Zimaboard</li>
+                            <li class="stack-item">ZimaOS</li>
+                            <li class="stack-item">Ubuntu Server</li>
+                            <li class="stack-item">SSH</li>
+                            <li class="stack-item">VMware vSphere</li>
                         </ul>
                     </div>
-
                     <div>
-                        <h3 class="techstack-cat">AI Agents &amp; Automation</h3>
-                        <ul class="techstack-items">
-                            <li class="techstack-item">Hermes Agent</li>
-                            <li class="techstack-item">Anthropic Claude</li>
-                            <li class="techstack-item">OpenAI ChatGPT</li>
-                            <li class="techstack-item">DeepSeek V4</li>
-                            <li class="techstack-item">Codex CLI</li>
-                            <li class="techstack-item">Ollama</li>
-                            <li class="techstack-item">PowerShell</li>
+                        <div class="stack-cat">AI Agents &amp; Automation</div>
+                        <ul class="stack-items">
+                            <li class="stack-item">Hermes Agent</li>
+                            <li class="stack-item">Anthropic Claude</li>
+                            <li class="stack-item">OpenAI ChatGPT</li>
+                            <li class="stack-item">DeepSeek V4</li>
+                            <li class="stack-item">Codex CLI</li>
+                            <li class="stack-item">Ollama</li>
+                            <li class="stack-item">PowerShell</li>
                         </ul>
                     </div>
-
                     <div>
-                        <h3 class="techstack-cat">Enterprise IT</h3>
-                        <ul class="techstack-items">
-                            <li class="techstack-item">Microsoft 365</li>
-                            <li class="techstack-item">Azure Entra ID</li>
-                            <li class="techstack-item">Google Workspace</li>
-                            <li class="techstack-item">Active Directory</li>
-                            <li class="techstack-item">Windows Server</li>
-                            <li class="techstack-item">CrowdStrike</li>
-                            <li class="techstack-item">Veeam</li>
-                            <li class="techstack-item">ServiceNow</li>
+                        <div class="stack-cat">Enterprise IT</div>
+                        <ul class="stack-items">
+                            <li class="stack-item">Microsoft 365</li>
+                            <li class="stack-item">Azure Entra ID</li>
+                            <li class="stack-item">Google Workspace</li>
+                            <li class="stack-item">Active Directory</li>
+                            <li class="stack-item">Windows Server</li>
+                            <li class="stack-item">CrowdStrike</li>
+                            <li class="stack-item">Veeam</li>
+                            <li class="stack-item">ServiceNow</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="journey" style="background: var(--color-off-white);">
+        <section style="background: var(--color-snow); text-align: center;">
             <div class="section-inner">
-                <h2 class="section-heading">Born in Spain.<br>Built Across Three Continents.</h2>
-
+                <div class="section-label">My Journey</div>
+                <h2 class="section-title" style="max-width: 700px; margin: 0 auto var(--spacing-40);">Born in Spain. Built Across Three Continents.</h2>
                 <div class="journey-grid">
                     <div class="journey-card">
                         <span class="journey-flag">🇪🇸</span>
@@ -820,7 +452,7 @@
                     </div>
                     <div class="journey-card">
                         <span class="journey-flag">🇬🇧</span>
-                        <div class="journey-place">United Kingdom</div>
+                        <div class="journey-place">UK</div>
                         <div class="journey-context">Infrastructure &amp; operations</div>
                     </div>
                     <div class="journey-card">
@@ -834,22 +466,20 @@
                         <div class="journey-context">Contracting &amp; delivery</div>
                     </div>
                 </div>
-
                 <div class="journey-footer">
-                    I communicate with global teams in <strong>English, Spanish, and Japanese</strong> — not through translators. I've delivered IT operations across European and Asian business cultures, bridging time zones, cultures, and vendors across the globe.
+                    I communicate with global teams in <strong>English, Spanish, and Japanese</strong>. I've delivered IT operations across European and Asian business cultures, bridging time zones, teams, and vendors globally.
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact">
-            <div class="section-inner">
-                <h2 class="contact-heading">Available for Contract</h2>
+        <section id="contact">
+            <div class="section-inner contact">
+                <div class="contact-heading">Available for Contract</div>
                 <a href="mailto:hello@viewstate.co" class="contact-email">hello@viewstate.co</a>
                 <div class="contact-meta">
                     <p>Project, fractional, and retainer engagements</p>
                     <p>Dubai (GMT+4) · Remote or on-site</p>
                 </div>
-
                 <form action="https://formspree.io/f/xojnedkk" method="POST" class="contact-form">
                     <div class="form-group">
                         <label class="form-label" for="name">Name</label>
