@@ -109,35 +109,57 @@
         .hero-inner { max-width: 720px; margin: 0 auto; position: relative; z-index: 1; }
 
         .hero-portrait {
-            width: 96px;
-            height: 96px;
-            margin: 0 auto var(--spacing-32);
+            width: 110px;
+            height: 110px;
+            margin: 0 auto var(--spacing-40);
             background: var(--color-charcoal-surface);
-            border: 1px dashed var(--color-medium-gray);
+            border: 1px solid var(--color-dark-slate);
             border-radius: var(--radius-sm);
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            transition: border-color 0.2s;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        .hero-portrait::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: calc(var(--radius-sm) + 1px);
+            border: 1px dashed var(--color-medium-gray);
+            opacity: 0.4;
+            transition: opacity 0.3s;
         }
         .hero-portrait:hover {
             border-color: var(--color-highlight-orange);
-            border-style: solid;
+            box-shadow: 0 0 20px rgba(218,92,44,0.08);
         }
-        .hero-portrait svg {
-            opacity: 0.3;
+        .hero-portrait:hover::before {
+            opacity: 0.8;
+            border-color: var(--color-highlight-orange);
         }
-        .hero-portrait-label {
+
+        .hero-portrait-icon {
+            position: relative;
+            z-index: 1;
+            opacity: 0.25;
+            transition: opacity 0.3s;
+        }
+        .hero-portrait:hover .hero-portrait-icon {
+            opacity: 0.4;
+        }
+
+        .hero-portrait-dot {
             position: absolute;
-            bottom: -18px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 10px;
-            color: var(--color-stone-accent);
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            white-space: nowrap;
+            bottom: 8px;
+            right: 8px;
+            width: 6px;
+            height: 6px;
+            background: var(--color-highlight-orange);
+            border-radius: 50%;
+            opacity: 0.3;
+            z-index: 1;
         }
         .hero-tag {
             font-size: var(--text-caption);
@@ -368,8 +390,8 @@
         @media (max-width: 480px) {
             .hero { padding: var(--spacing-64) 20px; }
             .hero-stats { gap: var(--spacing-16); justify-content: space-around; }
-            .hero-portrait { width: 72px; height: 72px; margin-bottom: var(--spacing-24); }
-            .hero-portrait svg { width: 24px; height: 24px; }
+            .hero-portrait { width: 80px; height: 80px; margin-bottom: var(--spacing-24); }
+            .hero-portrait-icon { width: 26px; height: 26px; }
             .nav-links { gap: var(--spacing-16); }
             .services-grid { grid-template-columns: 1fr; }
             .service-card { padding: var(--spacing-24); }
@@ -452,11 +474,11 @@
             </svg>
             <div class="hero-inner">
                 <div class="hero-portrait">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#606060" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                        <circle cx="12" cy="7" r="4"/>
+                    <svg class="hero-portrait-icon" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#606060" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                        <circle cx="12" cy="13" r="4"/>
                     </svg>
-                    <span class="hero-portrait-label">photo</span>
+                    <span class="hero-portrait-dot"></span>
                 </div>
                 <div class="hero-tag">IT Contractor — Dubai</div>
                 <h1 class="hero-title">IT Operations &amp; Infrastructure<br>Across APAC &amp; EMEA</h1>
