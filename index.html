@@ -23,7 +23,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --color-ink: #292524;
-            --color-paper: #fafaf9;
+            --color-paper: #f0eeec;
             --color-whisper: #e7e5e4;
             --color-snow: #ffffff;
             --color-graphite: #79716b;
@@ -153,7 +153,7 @@
         /* Services grid */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: var(--spacing-24);
         }
         .service-card {
@@ -297,6 +297,7 @@
 
         @media (max-width: 768px) {
             .stack-grid { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
             .hero-stats { gap: var(--spacing-24); flex-wrap: wrap; }
             nav { padding: var(--spacing-16) 20px; }
             section { padding: var(--spacing-40) 20px; }
@@ -380,6 +381,12 @@
                         <h3 class="service-title">Global Team Operations</h3>
                         <p class="service-desc">Managing IT teams across APAC and EMEA. Coordinated deployments from London to Shanghai.</p>
                         <div class="service-tags"><span class="service-tag">Team Coordination</span><span class="service-tag">Multi-Region</span><span class="service-tag">Cultural Bridging</span></div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-num">06</div>
+                        <h3 class="service-title">IT Procurement &amp; Asset Lifecycle</h3>
+                        <p class="service-desc">Hardware sourcing, vendor negotiations, inventory tracking, and lifecycle management from procurement to decommissioning.</p>
+                        <div class="service-tags"><span class="service-tag">Vendor Relations</span><span class="service-tag">Asset Tracking</span><span class="service-tag">Budget Optimization</span></div>
                     </div>
                 </div>
             </div>
