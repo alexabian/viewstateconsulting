@@ -107,6 +107,38 @@
             vector-effect: non-scaling-stroke;
         }
         .hero-inner { max-width: 720px; margin: 0 auto; position: relative; z-index: 1; }
+
+        .hero-portrait {
+            width: 96px;
+            height: 96px;
+            margin: 0 auto var(--spacing-32);
+            background: var(--color-charcoal-surface);
+            border: 1px dashed var(--color-medium-gray);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: border-color 0.2s;
+        }
+        .hero-portrait:hover {
+            border-color: var(--color-highlight-orange);
+            border-style: solid;
+        }
+        .hero-portrait svg {
+            opacity: 0.3;
+        }
+        .hero-portrait-label {
+            position: absolute;
+            bottom: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 10px;
+            color: var(--color-stone-accent);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
         .hero-tag {
             font-size: var(--text-caption);
             font-weight: 500;
@@ -336,6 +368,8 @@
         @media (max-width: 480px) {
             .hero { padding: var(--spacing-64) 20px; }
             .hero-stats { gap: var(--spacing-16); justify-content: space-around; }
+            .hero-portrait { width: 72px; height: 72px; margin-bottom: var(--spacing-24); }
+            .hero-portrait svg { width: 24px; height: 24px; }
             .nav-links { gap: var(--spacing-16); }
             .services-grid { grid-template-columns: 1fr; }
             .service-card { padding: var(--spacing-24); }
@@ -417,6 +451,13 @@
                 <rect x="100" y="510" width="12" height="60" rx="1" fill="#DA5C2C" opacity="0.12"/>
             </svg>
             <div class="hero-inner">
+                <div class="hero-portrait">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#606060" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    <span class="hero-portrait-label">photo</span>
+                </div>
                 <div class="hero-tag">IT Contractor — Dubai</div>
                 <h1 class="hero-title">IT Operations &amp; Infrastructure<br>Across APAC &amp; EMEA</h1>
                 <p class="hero-sub">15+ years leading hardware rollouts, infrastructure projects, and IT operations for companies that need experienced execution without the overhead.</p>
