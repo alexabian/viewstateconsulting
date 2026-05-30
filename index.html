@@ -541,6 +541,53 @@
             color: var(--color-dark-navy);
         }
 
+        /* Tech Stack */
+        .techstack {
+            padding: clamp(64px, 10vw, 120px) clamp(20px, 5vw, 40px);
+            background: var(--color-dark-navy);
+            color: var(--color-cream);
+        }
+
+        .techstack-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .techstack-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+            gap: clamp(28px, 4vw, 40px);
+            margin-top: clamp(32px, 5vw, 48px);
+        }
+
+        .techstack-category-title {
+            font-family: var(--font-display);
+            font-size: clamp(15px, 1.8vw, 18px);
+            font-weight: 700;
+            margin-bottom: clamp(14px, 2vw, 20px);
+            letter-spacing: -0.01em;
+            color: var(--color-accent);
+        }
+
+        .techstack-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: clamp(6px, 1vw, 10px);
+            list-style: none;
+        }
+
+        .techstack-item {
+            font-size: clamp(11px, 1.2vw, 13px);
+            padding: 6px 14px;
+            border: 1px solid var(--color-charcoal);
+            transition: var(--transition);
+            color: var(--color-cream);
+        }
+
+        .techstack-item:hover {
+            border-color: var(--color-accent);
+        }
+
         /* Footer */
         footer {
             background: var(--color-dark-navy);
@@ -608,8 +655,8 @@
                     <div class="stat-label">Countries delivered</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-num">60+</div>
-                    <div class="stat-label">Technicians hired &amp; led</div>
+                    <div class="stat-num">3</div>
+                    <div class="stat-label">Languages</div>
                 </div>
             </div>
         </section>
@@ -676,11 +723,11 @@
                         <div class="service-num">05</div>
                         <h3 class="service-title">Global Team Operations</h3>
                         <p class="service-desc">
-                            Managing IT teams across APAC and EMEA time zones. I've hired 60+ technicians and coordinated deployments from London to Shanghai.
+                            Managing IT teams across APAC and EMEA time zones. Coordinated deployments and support operations from London to Shanghai.
                         </p>
                         <ul class="service-features">
-                            <li>Remote team hiring &amp; training</li>
-                            <li>Multi-region coordination</li>
+                            <li>Team coordination &amp; leadership</li>
+                            <li>Multi-region operations</li>
                             <li>Cultural &amp; language bridging</li>
                         </ul>
                     </div>
@@ -717,14 +764,64 @@
             </div>
 
             <div class="project-card">
-                <div class="project-title">Remote Team Hiring &amp; Regional IT Management</div>
+                <div class="project-title">Regional IT Team Management</div>
                 <p class="project-desc">
-                    Interviewed 60+ candidates for IT support roles across regional offices. Built and managed teams across Beijing, Shanghai, and other APAC locations. Hired staff who remain in management today.
+                    Managed IT teams across Beijing, Shanghai, and other APAC locations. Conducted technical assessments and coordinated staffing across regional offices. Built workflows and processes that are still in use today.
                 </p>
                 <div class="project-tags">
-                    <span class="project-tag">Hiring</span>
-                    <span class="project-tag">Team Building</span>
+                    <span class="project-tag">Team Management</span>
                     <span class="project-tag">APAC</span>
+                    <span class="project-tag">Process Design</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="techstack">
+            <div class="techstack-content">
+                <div class="section-label">my stack</div>
+                <h2 class="section-title">Tools I Work With Every Day</h2>
+
+                <div class="techstack-grid">
+                    <div>
+                        <div class="techstack-category-title">Homelab &amp; Infrastructure</div>
+                        <ul class="techstack-items">
+                            <li class="techstack-item">Proxmox VE</li>
+                            <li class="techstack-item">Zimaboard</li>
+                            <li class="techstack-item">ZimaOS</li>
+                            <li class="techstack-item">Ubuntu Server</li>
+                            <li class="techstack-item">SSH</li>
+                            <li class="techstack-item">Docker</li>
+                            <li class="techstack-item">VMware vSphere</li>
+                            <li class="techstack-item">Hyper-V</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="techstack-category-title">AI Agents &amp; Automation</div>
+                        <ul class="techstack-items">
+                            <li class="techstack-item">Hermes Agent</li>
+                            <li class="techstack-item">Anthropic Claude</li>
+                            <li class="techstack-item">OpenAI ChatGPT</li>
+                            <li class="techstack-item">DeepSeek V4</li>
+                            <li class="techstack-item">Codex CLI</li>
+                            <li class="techstack-item">Ollama</li>
+                            <li class="techstack-item">PowerShell</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="techstack-category-title">Enterprise IT</div>
+                        <ul class="techstack-items">
+                            <li class="techstack-item">Microsoft 365</li>
+                            <li class="techstack-item">Azure Entra ID</li>
+                            <li class="techstack-item">Google Workspace</li>
+                            <li class="techstack-item">Active Directory</li>
+                            <li class="techstack-item">Windows Server</li>
+                            <li class="techstack-item">CrowdStrike</li>
+                            <li class="techstack-item">Veeam</li>
+                            <li class="techstack-item">ServiceNow</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
