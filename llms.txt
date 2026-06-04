@@ -21,7 +21,7 @@ Spain · United Kingdom · Japan · United Arab Emirates
 - IT Procurement & Asset Lifecycle
 
 ## Tech Stack
-Proxmox VE · Zimaboard · ZimaOS · Ubuntu Server · SSH · VMware vSphere · Hermes Agent · Anthropic Claude · OpenAI ChatGPT · DeepSeek V4 · Codex CLI · Ollama · PowerShell · Microsoft 365 · Azure Entra ID · Google Workspace · Active Directory · Windows Server · CrowdStrike · Veeam · ServiceNow
+Proxmox VE · Zimaboard · ZimaOS · Ubuntu Server · SSH · VMware vSphere · Hermes Agent · OpenAI ChatGPT · DeepSeek V4 · Codex CLI · Ollama · PowerShell · Microsoft 365 · Azure Entra ID · Google Workspace · Active Directory · Windows Server · CrowdStrike · Veeam · ServiceNow
 
 ## Contact
 Email: hello@viewstate.co

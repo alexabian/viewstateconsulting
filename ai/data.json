@@ -28,7 +28,7 @@
   ],
   "tools": [
     "Proxmox VE", "Zimaboard", "ZimaOS", "Ubuntu Server",
-    "Hermes Agent", "Anthropic Claude", "OpenAI ChatGPT", "DeepSeek V4",
+    "Hermes Agent", "OpenAI ChatGPT", "DeepSeek V4",
     "Codex CLI", "Ollama",
     "Microsoft 365", "Azure Entra ID", "Google Workspace",
     "Active Directory", "Windows Server", "VMware vSphere",
