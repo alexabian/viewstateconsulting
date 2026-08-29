@@ -1,0 +1,18 @@
+/* Small accessibility corrections that preserve the approved visual design. */
+:root {
+  --teal: #4a7571;
+}
+
+.hero-proof,
+.contact-meta {
+  color: #66706a;
+}
+
+.nav-links > a:not(.nav-contact) {
+  padding-block: 12px;
+}
+
+footer a:not(.brand) {
+  display: inline-block;
+  padding-block: 4px;
+}
