@@ -1,18 +1,52 @@
-/* Small accessibility corrections that preserve the approved visual design. */
-:root {
-  --teal: #4a7571;
-}
+/* ==========================================================================
+   accessibility.css — Viewstate Consulting
+   Loaded AFTER style.css so these rules win at equal specificity.
+   Corrections only: no layout, typography or palette changes beyond the
+   minimum needed to clear the thresholds below.
 
-.hero-proof,
-.contact-meta {
-  color: #66706a;
-}
+   Measured with the WCAG 2.x relative-luminance formula.
+   Thresholds: 4.5:1 for body text (WCAG 1.4.3 AA),
+               24x24 CSS px for pointer targets (WCAG 2.2 2.5.8 AA).
 
-.nav-links > a:not(.nav-contact) {
-  padding-block: 12px;
-}
+   Replaces the previous version of this file, which targeted the pre-redesign
+   markup (.nav-links, .hero-proof, .contact-meta) and had become inert.
+   ========================================================================== */
 
-footer a:not(.brand) {
-  display: inline-block;
-  padding-block: 4px;
-}
+/* --- 1. Small-text contrast -----------------------------------------------
+   The 9-12px muted greys. Two were failing outright; the rest sat under 5:1,
+   a thin margin at this size. Each value is the smallest darkening of the
+   original that reaches 5.5:1, so hue and the muted character are preserved.
+
+     .service-index       #7b8c9d  3.45:1 -> #5d6a77  5.54:1   FAILED
+     .contact-location    #58718f  4.44:1 -> #4d627c  5.52:1   FAILED
+     .languages           #5a718a  4.65:1 -> #51657c  5.53:1
+     footer p             #627487  4.81:1 -> #5a6a7c  5.54:1
+     .engagement-footer   #5a6d80  4.92:1 -> #546577  5.52:1
+     .service-tag         #617183  5.00:1 -> #5b6a7b  5.54:1
+   -------------------------------------------------------------------------- */
+.service-index     { color: #5d6a77; }
+.contact-location  { color: #4d627c; }
+.languages         { color: #51657c; }
+footer p           { color: #5a6a7c; }
+.engagement-footer { color: #546577; }
+.service-tag       { color: #5b6a7b; }
+
+/* --- 2. Pointer target size -----------------------------------------------
+   Every interactive link outside the padded <summary> rows rendered under the
+   24x24 minimum, because the stylesheet sets no vertical padding on them:
+
+     .header nav a      14px -> 23.1px tall;  12px below 800px -> 19.8px
+     footer .back-top   12px -> 19.8px tall;  11px below 560px -> 18.1px
+     .text-link         14px -> 23.1px tall;  13px below 560px -> 21.4px
+
+   Padding-block grows the hit area without moving anything: each is a flex
+   item and no surrounding rule constrains its height.
+   -------------------------------------------------------------------------- */
+.header nav a     { padding-block: 12px; }   /* -> 47.1px / 43.8px */
+footer .back-top  { padding-block: 6px; }    /* -> 31.8px / 30.1px */
+.text-link        { padding-block: 4px; }    /* -> 31.1px / 29.4px */
+
+/* Note: .header nav is display:none below 560px, so on phones the only
+   navigation offered is the hero's "Explore our expertise" link plus normal
+   scrolling. Content stays reachable, but section links are not in the header
+   on small screens. That is a design decision, not corrected here. */
