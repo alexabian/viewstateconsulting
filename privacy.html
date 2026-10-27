@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy | Viewstate Consulting</title>
+<meta name="description" content="How Viewstate Consulting FZCO handles personal data on viewstate.co.">
+<link rel="canonical" href="https://viewstate.co/privacy.html">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<style>
+  :root { --bg:#ece9e2; --ink:#0d1823; --muted:#4a5663; --line:rgba(13,24,35,.18); --accent:#c77a1c; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0d1823; --ink:#ece9e2; --muted:#a3adb8; --line:rgba(236,233,226,.16); --accent:#f0aa50; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:17px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  main { max-width:720px; margin:0 auto; padding:56px 16px 80px; }
+  a { color:inherit; text-decoration-color:var(--accent); text-underline-offset:3px; }
+  .back { font:12px/1 ui-monospace,"IBM Plex Mono",monospace; letter-spacing:.12em; text-transform:uppercase; text-decoration:none; color:var(--muted); }
+  h1 { font-size:clamp(34px,6vw,52px); line-height:1.05; letter-spacing:-.03em; font-weight:500; margin:28px 0 8px; }
+  .updated { color:var(--muted); margin:0 0 40px; }
+  h2 { font-size:21px; font-weight:600; margin:36px 0 8px; padding-top:20px; border-top:1px solid var(--line); }
+  p, li { color:var(--ink); }
+  ul { padding-left:20px; }
+  table { width:100%; border-collapse:collapse; font-size:15px; margin:8px 0; }
+  th, td { text-align:left; padding:8px 10px 8px 0; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { font-weight:600; }
+  button { cursor:pointer; padding:10px 18px; border-radius:999px; border:1px solid var(--ink); background:transparent; color:var(--ink); font:inherit; }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="/">← Viewstate Consulting</a>
+  <h1>Privacy</h1>
+  <p class="updated">Last updated 27 October 2026</p>
+
+  <p>This page explains what personal data viewstate.co collects, why, and what you can do about it. We keep it to the minimum needed to run the site and reply to enquiries.</p>
+
+  <h2>Who we are</h2>
+  <p>Viewstate Consulting FZCO is an independent IT consultancy based in Dubai, United Arab Emirates. For anything about your data, email <a href="mailto:contact@viewstate.co">contact@viewstate.co</a>.</p>
+
+  <h2>What we collect</h2>
+  <ul>
+    <li><strong>Enquiries.</strong> If you email us, book a call through Microsoft Bookings or send a brief through Microsoft Forms, we receive what you choose to share: usually your name, company, email address and message. We use it only to reply and to discuss the work.</li>
+    <li><strong>Website analytics.</strong> If you accept analytics cookies, Google Analytics records how the site is used: pages viewed, approximate location (country and city), device and browser type, and which contact links are clicked. It does not tell us who you are. If you decline, no analytics cookies are set and Google receives only basic, cookieless signals.</li>
+  </ul>
+  <p>We do not use advertising cookies, sell personal data or share it for marketing.</p>
+
+  <h2>Cookies</h2>
+  <table>
+    <tr><th>Cookie</th><th>Purpose</th><th>Kept for</th></tr>
+    <tr><td>_ga, _ga_*</td><td>Google Analytics: tells visits apart</td><td>Up to 2 years</td></tr>
+  </table>
+  <p>Your choice is remembered in your browser's local storage, not a cookie. You can change it at any time: <button type="button" id="reset">Change cookie settings</button></p>
+
+  <h2>Who processes the data</h2>
+  <ul>
+    <li><strong>Microsoft</strong> (Microsoft 365: email, Bookings and Forms)</li>
+    <li><strong>Google</strong> (Google Analytics)</li>
+    <li><strong>GitHub</strong> and <strong>Cloudflare</strong> (hosting and network delivery of this site, which involves standard server logs)</li>
+  </ul>
+  <p>These providers may store data outside the UAE under their own security and privacy commitments.</p>
+
+  <h2>How long we keep it</h2>
+  <p>Enquiry emails and form responses are kept for as long as needed to handle the enquiry and any resulting work, then deleted. Analytics data is kept for 14 months.</p>
+
+  <h2>Your choices</h2>
+  <p>You can ask to see, correct or delete the personal data we hold about you by emailing <a href="mailto:contact@viewstate.co">contact@viewstate.co</a>. We'll reply within 30 days.</p>
+</main>
+<script>
+  document.getElementById('reset').addEventListener('click', function () {
+    try { localStorage.removeItem('vs_consent'); } catch (e) {}
+    window.location.href = '/';
+  });
+</script>
+</body>
+</html>
