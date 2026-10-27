@@ -1,4 +1,59 @@
-User-agent: *
+# viewstate.co — search crawlers welcome, model-training crawlers excluded.
+# AI *search* bots (which cite and link to pages) are allowed.
+# AI *training* crawlers (which reuse content without attribution) are not.
+
+# --- AI search / answer engines: allowed ---
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
 Allow: /
 
+# --- Model training crawlers: not permitted ---
+User-agent: GPTBot
+Disallow: /
+User-agent: ClaudeBot
+Disallow: /
+User-agent: anthropic-ai
+Disallow: /
+User-agent: CCBot
+Disallow: /
+User-agent: Google-Extended
+Disallow: /
+User-agent: Applebot-Extended
+Disallow: /
+User-agent: Bytespider
+Disallow: /
+User-agent: Amazonbot
+Disallow: /
+User-agent: Meta-ExternalAgent
+Disallow: /
+User-agent: cohere-ai
+Disallow: /
+User-agent: Diffbot
+Disallow: /
+User-agent: Omgilibot
+Disallow: /
+User-agent: ImagesiftBot
+Disallow: /
+User-agent: YouBot
+Disallow: /
+User-agent: AI2Bot
+Disallow: /
+
+# --- Everything else ---
+User-agent: *
+Allow: /
+Disallow: /config
+Disallow: /search
+Disallow: /api/
+
 Sitemap: https://viewstate.co/sitemap.xml
+# Content index for AI answer engines: https://viewstate.co/llms.txt

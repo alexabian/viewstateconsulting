@@ -1,0 +1,377 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Viewstate Consulting — content index",
+  "url": "https://viewstate.co/ai/content.json",
+  "dateModified": "2026-10-27",
+  "publisher": {
+    "@type": "ProfessionalService",
+    "name": "Viewstate Consulting",
+    "url": "https://viewstate.co/",
+    "email": "contact@viewstate.co",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dubai",
+      "addressCountry": "AE"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Alejandro Abian"
+    },
+    "knowsLanguage": [
+      "en",
+      "es",
+      "ja"
+    ]
+  },
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "id": "microsoft-365-consulting-dubai",
+        "url": "https://viewstate.co/microsoft-365-consulting-dubai/",
+        "title": "Microsoft 365 consulting in Dubai",
+        "summary": "Independent Microsoft 365 consulting in Dubai: tenant set-up, email migration, Entra ID and conditional access, SPF/DKIM/DMARC, and ongoing remote administration.",
+        "quick_answer": "Viewstate is an independent IT consultancy in Dubai that sets up, secures and administers Microsoft 365 and Entra ID for small and mid-sized companies. Typical work: a tenant build or a migration off an on-premise Exchange server, tightening sign-in and email security, then running the tenant on a monthly basis. Engagements are fixed-scope projects or a monthly remote service. Delivery is remote, with on-site days in Dubai and the GCC when the work calls for it.",
+        "scope": [
+          {
+            "area": "Tenant set-up and email migration",
+            "detail": "Greenfield tenants and moves from on-premise Exchange, including Exchange hybrid coexistence while both systems run in parallel."
+          },
+          {
+            "area": "Entra ID, Active Directory, groups and conditional access",
+            "detail": "Joining devices, structuring groups and roles, and putting sign-in rules in place that people can live with."
+          },
+          {
+            "area": "Email security and deliverability",
+            "detail": "SPF, DKIM and DMARC configured and tested, so mail reaches inboxes and the domain cannot be spoofed easily."
+          },
+          {
+            "area": "Ongoing administration",
+            "detail": "Day-to-day Microsoft 365 administration, remote, as a monthly service rather than a permanent hire."
+          },
+          {
+            "area": "Licence and tenant hygiene",
+            "detail": "Reviewing what is actually assigned and used, and cleaning up the sprawl that accumulates over time."
+          }
+        ],
+        "audience": [
+          "A company moving off an ageing on-premise mail server, or off a tenant nobody documented.",
+          "An office that has grown past ad-hoc IT and needs identity and email security done properly.",
+          "A business with no IT manager that wants a named senior contact for Microsoft 365 questions.",
+          "A new UAE office of a foreign company that needs a tenant set up the way its headquarters expects."
+        ],
+        "questions": [
+          {
+            "q": "How long does a Microsoft 365 migration take?",
+            "a": "A small tenant with mail and file data typically runs two to four weeks from kick-off to handover: assessment, staged migration, cutover weekend, then a stabilisation period. Exchange hybrid or multi-site environments take longer, and the estimate is set after the discovery call."
+          },
+          {
+            "q": "Can you take over a Microsoft 365 tenant another provider set up?",
+            "a": "Yes. This is common. The starting point is a documented review of the tenant, what is licensed, who has access and how sign-in and mail security are configured, followed by a prioritised list of what needs fixing."
+          },
+          {
+            "q": "Do you work remotely or on site in Dubai?",
+            "a": "Microsoft 365 administration is delivered remotely, which keeps it efficient. On-site time in Dubai is available where a migration, cutover or training session is better done in person."
+          },
+          {
+            "q": "Do you replace our IT support company?",
+            "a": "Not necessarily. Viewstate often works alongside an existing support provider, owning the tenant, identity and security layer while day-to-day helpdesk stays where it is."
+          }
+        ],
+        "updated": "2026-10-27"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "id": "it-infrastructure-support-dubai",
+        "url": "https://viewstate.co/it-infrastructure-support-dubai/",
+        "title": "IT infrastructure and operations consulting in Dubai",
+        "summary": "Hands-on IT infrastructure consulting in Dubai: VMware, Hyper-V and Proxmox virtualisation, Veeam backup and restore testing, UniFi networks, and security health checks.",
+        "quick_answer": "Viewstate provides hands-on infrastructure ownership for Dubai companies that depend on systems nobody is actively looking after. The work centres on four things: virtualisation, backup that has actually been restore-tested, network and Wi-Fi, and the security basics that quietly fail over time. Engagements are a defined project or an ongoing monthly commitment. Delivery is remote-first, with on-site work in Dubai and the GCC for physical changes.",
+        "scope": [
+          {
+            "area": "Virtualisation",
+            "detail": "VMware, Hyper-V and Proxmox environments reviewed, consolidated and cleaned up, including host capacity and guest sprawl."
+          },
+          {
+            "area": "Backup and recovery",
+            "detail": "Veeam backup designed against what the business actually needs to survive, and restore-tested rather than assumed to work."
+          },
+          {
+            "area": "Networks and Wi-Fi",
+            "detail": "UniFi networks, switches, wireless and cameras, plus secure remote access for staff who work outside the office."
+          },
+          {
+            "area": "Security health checks",
+            "detail": "A structured review of endpoints, patching, accounts and remote access, with a prioritised remediation list."
+          },
+          {
+            "area": "Operational ownership",
+            "detail": "Documentation, runbooks and vendor coordination so the environment stops depending on one person's memory."
+          }
+        ],
+        "audience": [
+          "A company whose infrastructure grew organically and is now hard to change or explain.",
+          "An organisation that has never actually tested a restore from its backups.",
+          "A business moving offices, adding a site or relocating a server room.",
+          "A team that needs senior technical capacity for a defined period rather than a full-time hire."
+        ],
+        "questions": [
+          {
+            "q": "What does an infrastructure assessment cover?",
+            "a": "Hosts and virtual machines, storage and capacity headroom, backup configuration and job history, network design and wireless coverage, accounts and remote access, patching state and the asset inventory. The output is a written findings document with a prioritised action list, not a sales document."
+          },
+          {
+            "q": "Do you test backups or just configure them?",
+            "a": "Both. Backup configuration without a tested restore is only an assumption. Restore tests are part of the delivery, and the result is recorded so you know what recovery actually looks like."
+          },
+          {
+            "q": "Can you support an environment another provider manages?",
+            "a": "Yes, in a defined scope. It is also common to work alongside an existing MSP, owning infrastructure and network layers while they handle service desk."
+          },
+          {
+            "q": "Do you cover both on-premise and cloud infrastructure?",
+            "a": "Yes. On-premise virtualisation and networks, Microsoft 365 and Entra ID, and hybrid arrangements where both sides have to agree with each other."
+          }
+        ],
+        "updated": "2026-10-27"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "id": "it-project-management-dubai",
+        "url": "https://viewstate.co/it-project-management-dubai/",
+        "title": "IT project management and on-site technical leadership in Dubai",
+        "summary": "Senior on-site technical leadership for IT migrations, deployments, office moves and cutover weekends in Dubai. Also available to MSPs and consultancies under their brand.",
+        "quick_answer": "Viewstate supplies a senior technical lead for IT projects in Dubai that need experienced judgement in the room: migrations, deployments, office moves and cutover weekends. The role is hands-on. It means directing your engineers or a partner's team, owning the runbook and being the person who decides when a step is safe to proceed. Engagements are scoped per project, from a single cutover weekend to a multi-month programme, and can be delivered white-label for MSPs and consultancies.",
+        "scope": [
+          {
+            "area": "On-site technical lead",
+            "detail": "A senior engineer-operator on site for migrations and deployments, directing the team executing the work rather than watching from a call."
+          },
+          {
+            "area": "Office moves and rollouts",
+            "detail": "Planning and running the technical side of a move: connectivity, cabling coordination, desk moves, device deployment and the first morning after."
+          },
+          {
+            "area": "Cutover weekends",
+            "detail": "Runbooks, rollback plans and a named decision-maker for the window when the business cannot afford to be down on Monday."
+          },
+          {
+            "area": "Vendor and partner coordination",
+            "detail": "Holding ISPs, hardware suppliers and software vendors to their commitments so the project timeline is not hostage to them."
+          },
+          {
+            "area": "White-label delivery for MSPs",
+            "detail": "Senior project support delivered under a partner's brand when a managed service provider needs extra capability for a specific engagement."
+          }
+        ],
+        "audience": [
+          "A company with an IT project that keeps slipping because nobody owns the technical decisions.",
+          "An internal team with the skills but not the seniority to call a cutover.",
+          "An MSP or consultancy that has sold a project it needs senior delivery capacity for.",
+          "A business opening or relocating an office in the UAE on a fixed date."
+        ],
+        "questions": [
+          {
+            "q": "Do you manage the project or do the technical work?",
+            "a": "The engagement is technical leadership, which usually means both. The deliverable is a project that lands: runbooks, cutover plans, decisions taken at the right moment, and a documented handover at the end."
+          },
+          {
+            "q": "Can you work with our existing IT team or MSP?",
+            "a": "Yes. This is the normal shape of the work: Viewstate leads the technical plan and directs the people executing it, whether they are internal engineers or a partner's team."
+          },
+          {
+            "q": "What is a cutover weekend engagement?",
+            "a": "A defined window for a migration or deployment where downtime has to be contained, typically Friday night to Sunday, with a tested rollback path and a go/no-go decision point before the change starts."
+          },
+          {
+            "q": "Do you work under an MSP's brand?",
+            "a": "Yes. Project support for managed service providers is delivered white-label under the partner's brand, as an extension of their delivery capability."
+          }
+        ],
+        "updated": "2026-10-27"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "id": "interim-it-manager-dubai",
+        "url": "https://viewstate.co/interim-it-manager-dubai/",
+        "title": "Interim and part-time IT manager in Dubai",
+        "summary": "Interim and part-time IT management in Dubai for companies without an IT manager or between hires. Vendor oversight, IT set-up for new UAE offices, ITIL-aligned service processes.",
+        "quick_answer": "Viewstate provides interim and part-time IT management in Dubai for companies that do not have an IT manager, or are between hires. The includes are practical: owning vendors and MSPs, keeping projects moving, setting up IT for a new UAE office, and putting service processes in place that people follow. Engagements run part-time, typically on a monthly basis, and end with a documented handover rather than a dependency.",
+        "scope": [
+          {
+            "area": "Part-time or interim IT manager",
+            "detail": "A named senior IT manager for a defined number of days per month, with the authority to make decisions and the discipline to document them."
+          },
+          {
+            "area": "Vendor and MSP oversight",
+            "detail": "Choosing, briefing and holding IT suppliers accountable, and stopping the pattern where each renewal is negotiated by whoever happens to answer the email."
+          },
+          {
+            "area": "IT set-up for new UAE offices",
+            "detail": "Offices of companies based in Japan, Europe and elsewhere: connectivity, devices, Microsoft 365, local suppliers and the bridge back to headquarters IT."
+          },
+          {
+            "area": "Service desk processes",
+            "detail": "Service desk and support workflows aligned with ITIL, sized to the company rather than copied from an enterprise manual."
+          },
+          {
+            "area": "IT priorities and budget",
+            "detail": "A rolling view of what matters, what it costs and what to stop paying for, in language a managing director can act on."
+          }
+        ],
+        "audience": [
+          "A company with no IT manager and no intention of hiring one full-time.",
+          "A business whose IT manager has left and needs cover while it recruits.",
+          "A foreign company opening its first UAE office that needs local senior IT ownership.",
+          "A managing director who cannot tell whether the IT spend is reasonable."
+        ],
+        "questions": [
+          {
+            "q": "How does interim IT management differ from hiring an IT manager?",
+            "a": "It is a commitment of days per month rather than a permanent headcount, and it is built to end. The objective is to stabilise, document and either hand over to a hire or continue on a light retainer."
+          },
+          {
+            "q": "How many days per month is typical?",
+            "a": "Most engagements start at two to four days per month and adjust to what the situation needs. The scope is agreed before the engagement starts and reviewed as it goes."
+          },
+          {
+            "q": "Can you manage a new office set-up before we have staff on the ground?",
+            "a": "Yes. IT set-up for new UAE offices of overseas companies is a recurring engagement: connectivity, hardware, Microsoft 365, local suppliers and coordination with headquarters IT."
+          },
+          {
+            "q": "Do you replace our MSP?",
+            "a": "Usually not. Viewstate typically sits above the MSP, owning priorities, vendor management and budget, while the MSP keeps delivering day-to-day support."
+          }
+        ],
+        "updated": "2026-10-27"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "id": "software-asset-management-dubai",
+        "url": "https://viewstate.co/software-asset-management-dubai/",
+        "title": "Software asset management and technology cost review in Dubai",
+        "summary": "Software Asset Management and technology cost review in Dubai: Microsoft 365, Adobe and Zoom licence reviews, renewal and procurement strategy, compliance and audit readiness.",
+        "quick_answer": "Viewstate connects what a company actually uses to what it pays for, then fixes the gap in both directions: unused licences cancelled, real needs covered, renewals negotiated from evidence. The work covers Software Asset Management, licence reviews across Microsoft 365, Adobe, Zoom and similar, renewal and procurement strategy, and audit readiness. Engagements are a single review project, or an ongoing light cadence so renewals never arrive unplanned again.",
+        "scope": [
+          {
+            "area": "Software Asset Management",
+            "detail": "A working inventory of what is installed, assigned and actually used, kept current instead of reconstructed during an audit."
+          },
+          {
+            "area": "Licence reviews",
+            "detail": "Microsoft 365, Adobe, Zoom and comparable estates: which tier fits which population, where duplication exists, and what can be reduced at renewal."
+          },
+          {
+            "area": "Renewals and procurement",
+            "detail": "Renewal calendar, negotiation preparation and vendor comparison, so decisions are made on evidence before the deadline rather than after it."
+          },
+          {
+            "area": "Compliance and audit readiness",
+            "detail": "Positioning for a vendor audit with documentation that answers the question before it becomes an invoice."
+          },
+          {
+            "area": "Vendor cost review",
+            "detail": "The wider technology spend: telecoms, cloud, support contracts and hardware refresh, reviewed as one picture rather than separate line items."
+          }
+        ],
+        "audience": [
+          "A company whose software spend has grown without anyone owning the decision.",
+          "A business facing a vendor audit or a renewal it does not understand.",
+          "An organisation that has been through layoffs or restructuring and is still paying for the old headcount.",
+          "A managing director who suspects over-licensing but has no evidence either way."
+        ],
+        "questions": [
+          {
+            "q": "What is Software Asset Management in practice?",
+            "a": "An accurate, maintained record of what software is licensed, to whom, at what tier, and whether it is used, tied to contracts and renewal dates. It exists so decisions are made on evidence rather than assumptions."
+          },
+          {
+            "q": "Will a licence review actually reduce cost?",
+            "a": "Often, yes: unused assignments, wrong tiers and duplicated tools are common. Where a reduction is not available, the outcome is still useful, because you know what you are paying for and what it covers."
+          },
+          {
+            "q": "Can you help before a Microsoft or Adobe audit?",
+            "a": "Yes. Audit readiness is part of the work: reconciling entitlements against deployment and usage, closing the gaps that are cheap to close now, and documenting the position."
+          },
+          {
+            "q": "Do you sell software licences?",
+            "a": "No. Viewstate is independent and does not resell licences, so the recommendation is not tied to a commission on what you buy."
+          }
+        ],
+        "updated": "2026-10-27"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "id": "ai-consulting-dubai",
+        "url": "https://viewstate.co/ai-consulting-dubai/",
+        "title": "AI consulting and adoption support in Dubai",
+        "summary": "Practical AI adoption for Dubai companies: readiness review, rolling out Claude or ChatGPT with admin and data rules, workflow automation, and private self-hosted AI.",
+        "quick_answer": "Viewstate helps Dubai companies put AI tools to work without losing control of company data. The work is deliberately practical: a readiness review of where AI helps and what it risks, a rollout of tools such as Claude or ChatGPT with admin, data rules and training, automation of repetitive document and reporting work, and private AI for data that cannot leave the building. Engagements are a pilot project or an ongoing advisory cadence, sized for companies without an AI team.",
+        "scope": [
+          {
+            "area": "AI readiness review",
+            "detail": "Where AI genuinely helps in this business, what it risks, and what a first pilot should be. Written so a non-technical director can decide."
+          },
+          {
+            "area": "Rollout and governance",
+            "detail": "Claude or ChatGPT deployed with the right plans, admin controls, data rules and training, so staff use it consistently instead of improvising."
+          },
+          {
+            "area": "Workflow automation",
+            "detail": "Repetitive document, email and reporting work automated with appropriate review points, measured against time saved."
+          },
+          {
+            "area": "Private and self-hosted AI",
+            "detail": "Local models for data that cannot leave the building, including the hardware and operational trade-offs involved."
+          },
+          {
+            "area": "Data protection and policy",
+            "detail": "A usable internal policy on what may be pasted into which tool, written by someone who has to enforce it."
+          }
+        ],
+        "audience": [
+          "A company where staff already use ChatGPT on personal accounts and nobody knows what is being pasted in.",
+          "A business that wants a first AI pilot with a measurable outcome rather than a workshop.",
+          "An organisation with client data or regulated information that cannot go to a public service.",
+          "A leadership team that needs a defensible position on AI before a client or auditor asks."
+        ],
+        "questions": [
+          {
+            "q": "Where should a company start with AI?",
+            "a": "With one workflow that is repetitive, text-heavy and clearly measurable, run as a short pilot with named owners. Readiness comes before tools: the first question is what data may be used, not which product to buy."
+          },
+          {
+            "q": "How do you keep company data out of public AI tools?",
+            "a": "By combining policy with configuration: appropriate plans and admin controls, clear rules on what may be entered where, and, where the data cannot leave the building, private models running on your own infrastructure."
+          },
+          {
+            "q": "Do you build custom AI applications?",
+            "a": "The focus is adoption and operations rather than software development: choosing, deploying, governing and automating with existing tools, plus private model hosting where that is the requirement."
+          },
+          {
+            "q": "Is private or self-hosted AI realistic for a small company?",
+            "a": "It is increasingly realistic, and the trade-offs are honest ones: hardware cost and operational effort against data staying entirely in-house. For a small company it usually makes sense for one specific dataset rather than everything."
+          }
+        ],
+        "updated": "2026-10-27"
+      }
+    }
+  ]
+}
