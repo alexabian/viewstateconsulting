@@ -26,14 +26,13 @@ CSS = """
 """
 
 SERVICES = [
-    ("01", "Microsoft 365 consulting", "/microsoft-365-consulting-dubai/", "Tenant, security, licensing"),
-    ("02", "IT infrastructure support", "/it-infrastructure-support-dubai/", "Networks, endpoints, backup"),
-    ("03", "IT project management", "/it-project-management-dubai/", "Migrations, fit-out, rollout"),
-    ("04", "Interim IT manager", "/it-interim-manager-dubai/", "Senior cover, month to month"),
-    ("05", "Software asset management", "/software-asset-management-dubai/", "Audit, compliance, cost"),
-    ("06", "AI consulting", "/ai-consulting-dubai/", "Pilots that reach production"),
+    ("01", "IT project management", "/it-project-management-dubai/", "Migrations, fit-out, rollout"),
+    ("02", "AI consulting", "/ai-consulting-dubai/", "Pilots that reach production"),
+    ("03", "Interim IT manager", "/interim-it-manager-dubai/", "Senior cover, month to month"),
+    ("04", "Microsoft 365 consulting", "/microsoft-365-consulting-dubai/", "Tenant, security, licensing"),
+    ("05", "IT infrastructure support", "/it-infrastructure-support-dubai/", "Networks, endpoints, backup"),
+    ("06", "Software &amp; IT cost review", "/software-asset-management-dubai/", "Licences, renewals, audits"),
 ]
-SERVICES[3] = ("04", "Interim IT manager", "/interim-it-manager-dubai/", "Senior cover, month to month")
 
 
 def build_block() -> str:
@@ -55,7 +54,7 @@ def build_block() -> str:
       <a href="mailto:contact@viewstate.co" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(236,233,226,.72);text-decoration:none">contact@viewstate.co</a>
       <a href="https://bookings.cloud.microsoft/book/ViewstateConsulting@viewstate.co/" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:oklch(0.78 0.15 60);text-decoration:none">Book a call</a>
       <span class="vs-meta">Dubai, UAE</span>
-      <span class="vs-meta">Reviewed 27 October 2026</span>
+      <span class="vs-meta">Reviewed 12 November 2026</span>
     </div>
   </div>
 </section>

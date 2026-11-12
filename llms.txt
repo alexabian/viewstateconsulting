@@ -5,15 +5,15 @@
 Site: https://viewstate.co/  ·  Contact: contact@viewstate.co  ·  Book: https://bookings.cloud.microsoft/book/ViewstateConsulting@viewstate.co/
 Languages: English, Spanish, Japanese. Serving Dubai, the UAE, the GCC, and remote international clients.
 Engagement models: fixed-scope project, embedded senior support, ongoing advisory / interim IT management.
-Last reviewed: 2026-10-27
+Last reviewed: 2026-11-12
 
 ## Services
+- [IT project management and on-site technical leadership in Dubai](https://viewstate.co/it-project-management-dubai/): Senior on-site technical leadership for IT migrations, deployments, office moves and cutover weekends in Dubai. Also available to MSPs and consultancies under their brand.
+- [AI consulting and adoption support in Dubai](https://viewstate.co/ai-consulting-dubai/): Practical AI adoption for Dubai companies: readiness review, rolling out Claude or ChatGPT with admin and data rules, workflow automation, and private self-hosted AI.
+- [Interim and part-time IT manager in Dubai](https://viewstate.co/interim-it-manager-dubai/): Interim and part-time IT management in Dubai for companies without an IT manager or between hires. Vendor oversight, IT set-up for new UAE offices, ITIL-aligned service processes.
 - [Microsoft 365 consulting in Dubai](https://viewstate.co/microsoft-365-consulting-dubai/): Independent Microsoft 365 consulting in Dubai: tenant set-up, email migration, Entra ID and conditional access, SPF/DKIM/DMARC, and ongoing remote administration.
 - [IT infrastructure and operations consulting in Dubai](https://viewstate.co/it-infrastructure-support-dubai/): Hands-on IT infrastructure consulting in Dubai: VMware, Hyper-V and Proxmox virtualisation, Veeam backup and restore testing, UniFi networks, and security health checks.
-- [IT project management and on-site technical leadership in Dubai](https://viewstate.co/it-project-management-dubai/): Senior on-site technical leadership for IT migrations, deployments, office moves and cutover weekends in Dubai. Also available to MSPs and consultancies under their brand.
-- [Interim and part-time IT manager in Dubai](https://viewstate.co/interim-it-manager-dubai/): Interim and part-time IT management in Dubai for companies without an IT manager or between hires. Vendor oversight, IT set-up for new UAE offices, ITIL-aligned service processes.
-- [Software asset management and technology cost review in Dubai](https://viewstate.co/software-asset-management-dubai/): Software Asset Management and technology cost review in Dubai: Microsoft 365, Adobe and Zoom licence reviews, renewal and procurement strategy, compliance and audit readiness.
-- [AI consulting and adoption support in Dubai](https://viewstate.co/ai-consulting-dubai/): Practical AI adoption for Dubai companies: readiness review, rolling out Claude or ChatGPT with admin and data rules, workflow automation, and private self-hosted AI.
+- [Software and IT cost review in Dubai](https://viewstate.co/software-asset-management-dubai/): Software Asset Management and technology cost review in Dubai: Microsoft 365, Adobe and Zoom licence reviews, renewal and procurement strategy, compliance and audit readiness.
 
 ## Key pages
 - [Viewstate Consulting home](https://viewstate.co/): overview, services, approach, founder profile
@@ -23,6 +23,7 @@ Last reviewed: 2026-10-27
 - Legal entity: Viewstate Consulting FZCO
 - Location: Dubai, United Arab Emirates
 - Founder: Alejandro Abian, Founder & Principal Consultant
+- Founded: 2025, in Dubai
 - Experience: 15+ years in international IT; ~10 years in Japan; also Spain and the United Kingdom
 - Clients: startups, SMEs, international companies with UAE offices, MSPs and consultancies needing senior delivery capability
 - Not a reseller: no licence commissions, no vendor quotas
